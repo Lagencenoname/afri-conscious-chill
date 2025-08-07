@@ -196,8 +196,8 @@ All colors MUST be HSL.
     @apply bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4 text-center;
   }
 
-  /* Hide Lovable badge */
-  [lovable-badge] {
-    display: none !important;
+  /* Make Lovable badge transparent */
+  #lovable-badge {
+    opacity: 0 !important;
   }
 }
