@@ -91,7 +91,7 @@ const PartnersSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in-up">
-              Nos Partenaires
+              Ils nous assistent
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Ensemble, nous construisons un écosystème créatif et entrepreneurial fort en Afrique
@@ -101,7 +101,7 @@ const PartnersSection = () => {
           {/* Main Partners */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-center mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-             Nos Partenaires
+             Eux aussi
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {mainPartners.map((partner, index) => (
@@ -139,7 +139,7 @@ const PartnersSection = () => {
           {/* Detailed Partners */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-center mb-8 animate-fade-in-up">
-              Nos Partenaires
+              Sans oublier 
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {detailedPartners.map((partner, index) => (
