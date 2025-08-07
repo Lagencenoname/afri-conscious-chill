@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src={accLogo} alt="African Conscious Chill" className="h-10 w-auto" />
+            <img src={accLogo} alt="African Conscious Chill" className="h-14 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
