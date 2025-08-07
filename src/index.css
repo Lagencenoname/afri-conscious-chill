@@ -9,34 +9,54 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 18 100% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 122 39% 49%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 18 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* African Conscious Chill Brand Colors */
+    --orange-primary: 18 100% 60%;
+    --orange-secondary: 35 100% 54%;
+    --green-cta: 122 39% 49%;
+    --red-accent: 0 84% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--orange-primary)), hsl(var(--orange-secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--orange-primary)) 0%, hsl(var(--orange-secondary)) 100%);
+    --gradient-cta: linear-gradient(45deg, hsl(var(--green-cta)), hsl(122 39% 39%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--orange-primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--orange-secondary) / 0.2);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,74 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* CTA Buttons */
+  .cta-primary {
+    @apply bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-green-600 hover:to-green-700;
+  }
+  
+  .cta-secondary {
+    @apply border-2 border-primary text-primary font-bold py-4 px-8 rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105;
+  }
+  
+  .cta-hero {
+    @apply bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-6 px-12 rounded-2xl shadow-2xl hover:shadow-green-500/30 transition-all duration-300 hover:scale-105 text-lg;
+  }
+
+  /* Cards */
+  .pricing-card {
+    @apply bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100;
+  }
+  
+  .pricing-card-featured {
+    @apply bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary relative overflow-hidden;
+  }
+  
+  .activity-card {
+    @apply bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .partner-card {
+    @apply bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105;
+  }
+
+  /* Animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .pulse-glow {
+    @apply animate-pulse;
+    box-shadow: 0 0 20px hsl(var(--green-cta) / 0.5);
+  }
+
+  /* Hero Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+    position: relative;
+  }
+  
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    pointer-events: none;
+  }
+
+  /* Countdown styles */
+  .countdown-box {
+    @apply bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center;
   }
 }
