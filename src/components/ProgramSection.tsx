@@ -1,5 +1,5 @@
 import { MessageCircle, Mic, Wrench, Camera, Award, Music } from "lucide-react";
-import panelSpeakers from "@/assets/panel-speakers.png";
+import panelSpeakers from "@/assets/panel-speakers.jpg";
 
 const ProgramSection = () => {
   const activities = [
