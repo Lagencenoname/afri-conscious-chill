@@ -80,6 +80,24 @@ const PartnersSection = () => {
       description: "Société de Sécurité Privé nous sommes spécialisés dans la Protection Rapproché Gardiennage Protection de Témoin Chauffeur de Sécurité Sécurité Événementiel...",
       role: "Chargée de Sécurité de l'événement",
       website: "mailto:vikingprotecteu@gmail.com"
+    },
+    {
+      name: "Hounto 🍄",
+      description: "Mets faits à base du champignon comestible 🍄 et jus de fruits natures et cocktails",
+      role: "Exposante",
+      social: "https://www.facebook.com/share/1EVV5ngPQs/"
+    },
+    {
+      name: "E-DÉCOR SERVICES",
+      description: "Spécialisés dans la Décoration évènementielle et Mise en place. Travaille pour la beauté des espaces et lieux de fête. Formation et accompagnement des aspirants décorateurs.",
+      role: "Mettre les lieux en couleurs",
+      social: "https://www.facebook.com/eurin.trakpaou.5"
+    },
+    {
+      name: "Mp Brioche",
+      description: "Entreprise béninoise engagée dans la promotion du bien-être, de l'environnement et du goût à travers une gamme de produits boulangers et pâtissiers écoresponsables, faits maison et inspirés du terroir béninois.",
+      role: "Expérience gustative authentique, dégustations, promotion d'une consommation responsable",
+      social: "https://www.facebook.com/share/1Ae7rBU7FR/?mibextid=wwXIfr"
     }
   ];
 
