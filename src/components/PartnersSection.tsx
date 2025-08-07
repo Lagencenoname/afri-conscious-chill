@@ -44,9 +44,9 @@ const PartnersSection = () => {
 
   const detailedPartners = [
     {
-      name: "Creative Minds Africa",
+      name: "Creative Minds Africa - CMA",
       description: "Agence de communication - Accompagner les marques et les entrepreneurs dans la construction d'une présence forte et durable sur les réseaux sociaux, en Afrique et au-delà",
-      role: "Communication stratégique",
+      role: "Communication stratégique - Mise en place de la plateforme",
       website: "https://kloo.me/cma-empire",
       social: "https://www.facebook.com/cma.empire"
     },
