@@ -95,8 +95,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © 2025 African Conscious Chill. Tous droits réservés.
             </p>
-            <p class="credits">PLS Concept conçue<a href="https://kloo.me/order-pls" target="_blank" rel="noopener noreferrer" class="designer-link"></a> - <strong>CMA Communication</strong>
-            </p>
+<p>Site conçu par <a href="https://kloo.me/order-pls" target="_blank" rel="noopener noreferrer">PLS Concept - CMA Communication</a></p>            </p>
           </div>
         </div>
       </div>
