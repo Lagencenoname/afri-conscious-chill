@@ -197,7 +197,7 @@ All colors MUST be HSL.
   }
 
   /* Hide Lovable badge */
-  [data-lovable-badge] {
+  [lovable-badge] {
     display: none !important;
   }
 }
