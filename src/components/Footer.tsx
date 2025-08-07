@@ -1,5 +1,5 @@
 import { Facebook, Phone, MapPin, Mail } from "lucide-react";
-import accLogo from "@/assets/acc-logo.png";
+import accLogo from "@/assets/logo-africanconsciouschill.png";
 
 const Footer = () => {
   return (
