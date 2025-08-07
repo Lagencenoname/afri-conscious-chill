@@ -74,6 +74,12 @@ const PartnersSection = () => {
       description: "Agence de communication et de marketing digital 360°",
       role: "Communication sur l'événement, intervention keynote",
       social: "https://www.facebook.com/bsmgroupe/"
+    },
+    {
+      name: "VIKING PROTECTEUR SÉCURITÉ",
+      description: "Société de Sécurité Privé nous sommes spécialisés dans la Protection Rapproché Gardiennage Protection de Témoin Chauffeur de Sécurité Sécurité Événementiel...",
+      role: "Chargée de Sécurité de l'événement",
+      website: "mailto:vikingprotecteu@gmail.com"
     }
   ];
 
