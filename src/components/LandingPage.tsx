@@ -10,6 +10,7 @@ import PartnersSection from "./PartnersSection";
 import SocialSection from "./SocialSection";
 import FinalCTASection from "./FinalCTASection";
 import Footer from "./Footer";
+import WhatsAppButton from "./WhatsAppButton";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -47,6 +48,7 @@ const LandingPage = () => {
       <SocialSection />
       <FinalCTASection />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

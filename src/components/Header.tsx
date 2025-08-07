@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import accLogo from "@/assets/logo-africanconsciouschill.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent">
-              African Conscious Chill
-            </div>
+            <img src={accLogo} alt="African Conscious Chill" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
