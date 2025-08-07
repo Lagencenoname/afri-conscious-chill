@@ -195,4 +195,9 @@ All colors MUST be HSL.
   .countdown-box {
     @apply bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4 text-center;
   }
+
+  /* Hide Lovable badge */
+  [data-lovable-badge] {
+    display: none !important;
+  }
 }

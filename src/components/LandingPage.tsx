@@ -7,6 +7,7 @@ import ProgramSection from "./ProgramSection";
 import PricingSection from "./PricingSection";
 import PickupPointsSection from "./PickupPointsSection";
 import PartnersSection from "./PartnersSection";
+import FacebookPostSection from "./FacebookPostSection";
 import SocialSection from "./SocialSection";
 import FinalCTASection from "./FinalCTASection";
 import Footer from "./Footer";
@@ -45,6 +46,7 @@ const LandingPage = () => {
       <PricingSection />
       <PickupPointsSection />
       <PartnersSection />
+      <FacebookPostSection />
       <SocialSection />
       <FinalCTASection />
       <Footer />
