@@ -18,10 +18,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Logo/Title */}
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 drop-shadow-lg animate-fade-in-up">
-            African Conscious
-            <span className="block text-yellow-300">Chill 2025</span>
-          </h1>
+        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 mt-8 drop-shadow-lg animate-fade-in-up">
+          African Conscious
+          <span className="block text-yellow-300">Chill 2025</span>
+        </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
