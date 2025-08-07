@@ -40,11 +40,11 @@ const CountdownTimer = () => {
       </div>
       <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
         <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.minutes}</div>
-        <div className="text-xs sm:text-sm uppercase text-white/80">Minutes</div>
+        <div className="text-xs sm:text-sm uppercase text-white/80">Min</div>
       </div>
       <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
         <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.seconds}</div>
-        <div className="text-xs sm:text-sm uppercase text-white/80">Secondes</div>
+        <div className="text-xs sm:text-sm uppercase text-white/80">Sec</div>
       </div>
     </div>
   );
