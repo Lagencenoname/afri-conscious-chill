@@ -29,22 +29,22 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mt-8">
-      <div className="countdown-box">
-        <div className="text-3xl font-bold text-white">{timeLeft.days}</div>
-        <div className="text-sm uppercase text-white/80">Jours</div>
+    <div className="flex justify-center gap-2 sm:gap-4 mt-8 w-full">
+      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
+        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.days}</div>
+        <div className="text-xs sm:text-sm uppercase text-white/80">Jours</div>
       </div>
-      <div className="countdown-box">
-        <div className="text-3xl font-bold text-white">{timeLeft.hours}</div>
-        <div className="text-sm uppercase text-white/80">Heures</div>
+      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
+        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.hours}</div>
+        <div className="text-xs sm:text-sm uppercase text-white/80">Heures</div>
       </div>
-      <div className="countdown-box">
-        <div className="text-3xl font-bold text-white">{timeLeft.minutes}</div>
-        <div className="text-sm uppercase text-white/80">Minutes</div>
+      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
+        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.minutes}</div>
+        <div className="text-xs sm:text-sm uppercase text-white/80">Minutes</div>
       </div>
-      <div className="countdown-box">
-        <div className="text-3xl font-bold text-white">{timeLeft.seconds}</div>
-        <div className="text-sm uppercase text-white/80">Secondes</div>
+      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
+        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.seconds}</div>
+        <div className="text-xs sm:text-sm uppercase text-white/80">Secondes</div>
       </div>
     </div>
   );

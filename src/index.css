@@ -120,7 +120,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+  
+  /* Responsive fixes */
+  .container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 
@@ -131,7 +136,7 @@ All colors MUST be HSL.
   }
   
   .cta-secondary {
-    @apply border-2 border-primary text-primary font-bold py-4 px-8 rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-green-600 hover:to-green-700;
   }
   
   .cta-hero {
@@ -188,6 +193,6 @@ All colors MUST be HSL.
 
   /* Countdown styles */
   .countdown-box {
-    @apply bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center;
+    @apply bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4 text-center;
   }
 }

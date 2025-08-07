@@ -65,8 +65,8 @@ const PricingSection = () => {
                 style={{ animationDelay: `${0.4 + index * 0.2}s` }}
               >
                 {plan.badge && (
-                  <div className="absolute top-0 right-6 transform -translate-y-1/2">
-                    <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-1">
+                  <div className="absolute top-0 right-6 transform -translate-y-1/2 z-10">
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-1 shadow-lg">
                       <Star size={14} />
                       {plan.badge}
                     </div>

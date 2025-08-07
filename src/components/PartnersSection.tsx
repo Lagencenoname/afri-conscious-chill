@@ -43,6 +43,13 @@ const PartnersSection = () => {
 
   const detailedPartners = [
     {
+      name: "Creative Minds Africa",
+      description: "Agence de communication - Accompagner les marques et les entrepreneurs dans la construction d'une présence forte et durable sur les réseaux sociaux, en Afrique et au-delà",
+      role: "Communication stratégique",
+      website: "https://kloo.me/cma-empire",
+      social: "https://www.facebook.com/cma.empire"
+    },
+    {
       name: "L'Introverti",
       description: "Graphiste designer et Créateur de contenus vidéo spécialisé dans le corporate et l'événementiel",
       role: "Création de contenus vidéo",

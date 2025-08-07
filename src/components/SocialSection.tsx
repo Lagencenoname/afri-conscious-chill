@@ -11,7 +11,7 @@ const SocialSection = () => {
           </h2>
           
           <p className="text-xl text-white/90 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Restez connectés et ne manquez aucune actualité de l'African Conscious Chill
+            Restez connectés et ne manquez aucune actualité de l'African Conscious Chill • Déjà +50 inscrits
           </p>
 
           <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>

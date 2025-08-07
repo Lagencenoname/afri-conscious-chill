@@ -1,4 +1,5 @@
 import { Facebook, Phone, MapPin, Mail } from "lucide-react";
+import accLogo from "@/assets/acc-logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,12 @@ const Footer = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Brand */}
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-4">
-                African Conscious Chill
-              </h3>
+              <div className="flex items-center gap-3 mb-4">
+                <img src={accLogo} alt="African Conscious Chill" className="h-12 w-auto" />
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                  African Conscious Chill
+                </h3>
+              </div>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Le rendez-vous annuel des créateurs, entrepreneurs et marques qui croient au pouvoir de la collaboration en Afrique.
               </p>

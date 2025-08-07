@@ -1,4 +1,5 @@
 import { MessageCircle, Mic, Wrench, Camera, Award, Music } from "lucide-react";
+import panelSpeakers from "@/assets/panel-speakers.png";
 
 const ProgramSection = () => {
   const activities = [
@@ -47,6 +48,15 @@ const ProgramSection = () => {
             </p>
           </div>
 
+          {/* Panel Speakers Visual */}
+          <div className="mb-12 text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <img 
+              src={panelSpeakers} 
+              alt="Panel Speakers - Entreprises et Marques" 
+              className="max-w-full h-auto mx-auto rounded-2xl shadow-lg"
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {activities.map((activity, index) => {
               const Icon = activity.icon;
@@ -54,7 +64,7 @@ const ProgramSection = () => {
                 <div 
                   key={activity.title}
                   className="activity-card group hover:shadow-xl animate-fade-in-up"
-                  style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                  style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
                   <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-primary to-orange-600 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-7 h-7 text-white" />

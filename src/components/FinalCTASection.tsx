@@ -24,7 +24,7 @@ const FinalCTASection = () => {
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
               <Users className="text-yellow-300" size={20} />
-              <span className="text-white font-semibold">Déjà +200 inscrits</span>
+              <span className="text-white font-semibold">Déjà +50 inscrits</span>
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
               <Zap className="text-yellow-300" size={20} />
@@ -41,10 +41,11 @@ const FinalCTASection = () => {
           {/* Main CTA */}
           <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <Button 
-              className="bg-white text-red-600 hover:bg-gray-100 font-black py-6 px-12 rounded-2xl text-xl shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-105 pulse-glow"
+              className="bg-white text-red-600 hover:bg-gray-100 font-black py-4 sm:py-6 px-6 sm:px-12 rounded-2xl text-base sm:text-lg md:text-xl shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-105 pulse-glow w-full sm:w-auto"
               onClick={() => window.open('https://wa.me/message/TLW5YHAJ74CTH1', '_blank')}
             >
-              RÉSERVER MON BILLET MAINTENANT
+              <span className="block sm:inline">RÉSERVER MON BILLET</span>
+              <span className="block sm:inline sm:ml-1">MAINTENANT</span>
             </Button>
             
             <p className="text-white/80 text-sm">
