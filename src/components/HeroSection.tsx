@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
 
           {/* Countdown */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <div className="animate-fade-in-up mb-8" style={{ animationDelay: '0.8s' }}>
             <h3 className="text-2xl font-bold text-white mb-4">Plus que :</h3>
             <CountdownTimer />
           </div>
