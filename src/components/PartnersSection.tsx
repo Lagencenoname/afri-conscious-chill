@@ -82,7 +82,7 @@ const PartnersSection = () => {
     "Brandcom", "Around Africa", "Nyona", "Voxhub Studio", "Wilson Show",
     "Club des CMs", "Réseau Pub", "Life Surprise", "La Primeur Communication",
     "MCZEN Production", "Nike Impact", "AV Visuel", "Vimag Trading Center",
-    "Travelers", "VPS Sécurité", "Zachic", "Yellow Team", "Lyly Délice",
+    "Travelers", "Zachic", "Yellow Team", "Lyly Délice",
     "The Go Pro", "Concilia", "Satik", "Carina Juice et Cocktail", "BB Express"
   ];
 
