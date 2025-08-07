@@ -95,8 +95,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © 2025 African Conscious Chill. Tous droits réservés.
             </p>
-            <p className="text-gray-500 text-xs mt-2">
-              31 août 2025 • Pavillon du Lac • 15H
+            <p class="credits">PLS Concept conçue<a href="https://kloo.me/order-pls" target="_blank" rel="noopener noreferrer" class="designer-link"></a> - <strong>CMA Communication</strong>
             </p>
           </div>
         </div>
