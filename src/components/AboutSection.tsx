@@ -29,6 +29,14 @@ const AboutSection = () => {
               Un Mouvement, Une Vision, Une Communauté
             </h2>
             
+              {/* Event Poster */}
+            <div className="flex justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <img 
+                src="/lovable-uploads/0ee46383-762a-4901-af5b-b47d984780ff.png" 
+                alt="African Conscious Chill - Affiche événement 31 août 2025" 
+                className="max-w-full h-auto rounded-lg shadow-2xl max-w-2xl"
+              />
+            </div>
             <div className="max-w-4xl mx-auto">
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 African Conscious Chill, loin d'être un simple événement, est un <strong>mouvement</strong>, une <strong>vision</strong>, une <strong>communauté</strong> de créateurs, d'entrepreneurs et de marques qui croient au pouvoir de la collaboration.
@@ -38,15 +46,7 @@ const AboutSection = () => {
                 Le 31 août, on se donne rendez-vous pour échanger sur les enjeux du digital et construire ensemble de véritables ponts entre les entreprises et les créateurs visuels.
               </p>
             </div>
-
-            {/* Event Poster */}
-            <div className="flex justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <img 
-                src="/lovable-uploads/0ee46383-762a-4901-af5b-b47d984780ff.png" 
-                alt="African Conscious Chill - Affiche événement 31 août 2025" 
-                className="max-w-full h-auto rounded-lg shadow-2xl max-w-2xl"
-              />
-            </div>
+            
           </div>
 
           {/* Features Grid */}
