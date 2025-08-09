@@ -12,13 +12,13 @@ const FacebookPostSection = () => {
               <iframe 
                 src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02yx1nvMZK8nTptmW79JBJ9KhDjesmj657Po1E2Hss7monMH86dqEvFGV5ZNXL4a6il%26id%3D61555937974681&show_text=true&width=500" 
                 width="100%" 
-                height="250" 
-                style={{ border: 'none', overflow: 'hidden', minHeight: '250px' }} 
+                height="350" 
+                style={{ border: 'none', overflow: 'hidden' }} 
                 scrolling="no" 
                 frameBorder="0" 
                 allowFullScreen={true} 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                className="w-full h-auto min-h-[250px] sm:min-h-[300px] md:min-h-[350px]"
+                className="w-full h-[350px] sm:h-[400px] md:h-[450px]"
               />
             </div>
             
@@ -26,13 +26,13 @@ const FacebookPostSection = () => {
               <iframe 
                 src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid052SsuC82t6DYTn1hY61q8NnP7GM46ZbZXb5WbPBiuNPcWCmqTP1269zopAySjnB7l%26id%3D61555937974681&show_text=false&width=500" 
                 width="100%" 
-                height="498" 
+                height="600" 
                 style={{ border: 'none', overflow: 'hidden' }} 
                 scrolling="no" 
                 frameBorder="0" 
                 allowFullScreen={true} 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                className="w-full h-auto"
+                className="w-full h-[600px] sm:h-[650px] md:h-[700px]"
               />
             </div>
           </div>
