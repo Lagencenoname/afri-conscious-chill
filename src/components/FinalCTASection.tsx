@@ -24,7 +24,7 @@ const FinalCTASection = () => {
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
               <Users className="text-yellow-300" size={20} />
-              <span className="text-white font-semibold">Déjà +50 inscrits</span>
+              <span className="text-white font-semibold">Déjà +100 inscrits</span>
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
               <Zap className="text-yellow-300" size={20} />
