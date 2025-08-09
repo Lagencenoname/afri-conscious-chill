@@ -10,7 +10,7 @@ const FacebookPostSection = () => {
           <div className="flex justify-center animate-fade-in-up w-full" style={{ animationDelay: '0.2s' }}>
             <div className="w-full max-w-[500px]">
               <iframe 
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02z8AoDVq3xGRZmVYrh9Dav9kUixPr39o2uaRWP7pBheYVEzaKbtpnSSTRYmmUmKjdl%26id%3D61555937974681&show_text=true&width=500" 
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02yx1nvMZK8nTptmW79JBJ9KhDjesmj657Po1E2Hss7monMH86dqEvFGV5ZNXL4a6il%26id%3D61555937974681&show_text=true&width=500" 
                 width="100%" 
                 height="250" 
                 style={{ border: 'none', overflow: 'hidden', minHeight: '250px' }} 

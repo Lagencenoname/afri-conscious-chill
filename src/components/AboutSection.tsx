@@ -38,6 +38,15 @@ const AboutSection = () => {
                 Le 31 août, on se donne rendez-vous pour échanger sur les enjeux du digital et construire ensemble de véritables ponts entre les entreprises et les créateurs visuels.
               </p>
             </div>
+
+            {/* Event Poster */}
+            <div className="flex justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <img 
+                src="/lovable-uploads/0ee46383-762a-4901-af5b-b47d984780ff.png" 
+                alt="African Conscious Chill - Affiche événement 31 août 2025" 
+                className="max-w-full h-auto rounded-lg shadow-2xl max-w-2xl"
+              />
+            </div>
           </div>
 
           {/* Features Grid */}
@@ -48,7 +57,7 @@ const AboutSection = () => {
                 <div 
                   key={feature.title}
                   className="activity-card text-center animate-fade-in-up"
-                  style={{ animationDelay: `${0.6 + index * 0.2}s` }}
+                  style={{ animationDelay: `${0.8 + index * 0.2}s` }}
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-orange-600 rounded-full mb-6">
                     <Icon className="w-8 h-8 text-white" />
