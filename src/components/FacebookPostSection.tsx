@@ -21,6 +21,17 @@ const FacebookPostSection = () => {
                 className="w-full h-auto min-h-[250px] sm:min-h-[300px] md:min-h-[350px]"
               />
             </div>
+             <div className="w-full max-w-[500px]">
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid052SsuC82t6DYTn1hY61q8NnP7GM46ZbZXb5WbPBiuNPcWCmqTP1269zopAySjnB7l%26id%3D61555937974681&show_text=false&width=500" 
+                width="500" 
+                height="498" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
