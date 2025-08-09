@@ -6,35 +6,35 @@ const PickupPointsSection = () => {
       id: 1,
       contact: "OGBO Aziz",
       location: "EIGB Cotonou",
-      phone: "+229019601678",
+      phone: "+2290196016786",
       person: "Avril Ola"
     },
     {
       id: 2,
       contact: "Mendel GBEKOU",
       location: "Tankpè zone Calavi centre",
-      phone: "+229015697893",
+      phone: "+2290156978932",
       person: "Mendel GBEKOU"
     },
     {
       id: 3,
       contact: "GOUTON Fifamè Morelle",
       location: "Porto Novo",
-      phone: "+229014558342",
+      phone: "+2290145583428",
       person: "Fifamè Gouton"
     },
     {
       id: 4,
       contact: "Siège Siloe house Optique",
       location: "Campus Abomey-Calavi",
-      phone: "+229016039572",
+      phone: "+2290160395720",
       person: ""
     },
     {
       id: 5,
       contact: "Siège HILS COMPANY",
       location: "GODOMEY TOGOUDO",
-      phone: "+229016852597",
+      phone: "+2290168525972",
       person: ""
     }
   ];
