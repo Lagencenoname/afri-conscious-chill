@@ -16,7 +16,6 @@ const FloatingDots = ({ count = 18 }: { count?: number }) => {
           size,
           variant: `fd${(i % 4) + 1}`,
           delay: `${(Math.random() * 6).toFixed(2)}s`,
-          blur: Math.random() > 0.7,
         };
       }),
     [count]
@@ -34,8 +33,6 @@ const FloatingDots = ({ count = 18 }: { count?: number }) => {
             width: `${d.size}px`,
             height: `${d.size}px`,
             animationDelay: d.delay,
-            filter: d.blur ? "blur(1px)" : undefined,
-            boxShadow: "0 0 10px hsl(var(--orange-primary) / 0.6)",
           }}
         />
       ))}

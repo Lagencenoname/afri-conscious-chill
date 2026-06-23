@@ -34,7 +34,7 @@ const CampaignSection = () => {
               ))}
             </ul>
             <Link to="/salubrite" className="cta-primary">
-              Participer à la campagne <ArrowRight size={18} />
+              Confirme ta présence <ArrowRight size={18} />
             </Link>
           </div>
 
