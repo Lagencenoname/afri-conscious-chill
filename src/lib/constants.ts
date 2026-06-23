@@ -31,9 +31,9 @@ export const WHATSAPP_UNDERGROUND_URL = waLink(
 // --- Groupes WhatsApp (écran de confirmation campagne salubrité) ---
 // NOTE : remplacer ces liens d'invitation par les vrais liens des groupes.
 export const WHATSAPP_GROUP_PUBLIC =
-  "https://chat.whatsapp.com/REMPLACER_GROUPE_PUBLIC";
+  "https://chat.whatsapp.com/Cbzxl1vSu137gfT3gCVukL?s=cl&p=a&mlu=4";
 export const WHATSAPP_GROUP_MEDIA =
-  "https://chat.whatsapp.com/REMPLACER_GROUPE_MEDIA";
+  "https://chat.whatsapp.com/Br5XHyS5HyvDLfWGs72P4D?s=cl&p=a&mlu=4";
 
 /** Dates & lieu de l'édition 2026. */
 export const EVENT_DATE_TARGET = "2026-08-29T09:00:00"; // début compte à rebours
@@ -44,3 +44,6 @@ export const SALUBRITE_DATE_LABEL = "29 Juillet 2026";
 
 /** Réseaux sociaux. */
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61555937974681";
+
+/** Dossier de présentation / sponsoring (PDF servi depuis /public). */
+export const DOSSIER_PDF_URL = "/dossier-presentation-acc3.pdf";

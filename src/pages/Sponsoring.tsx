@@ -11,12 +11,13 @@ import {
   TrendingUp,
   ShieldCheck,
   Sparkles,
+  Download,
 } from "lucide-react";
 import accLogo from "@/assets/logo-africanconsciouschill.png";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import FloatingDots from "@/components/FloatingDots";
 import Footer from "@/components/Footer";
-import { waLink, EVENT_DATES_LABEL, EVENT_VENUE } from "@/lib/constants";
+import { waLink, EVENT_DATES_LABEL, EVENT_VENUE, DOSSIER_PDF_URL } from "@/lib/constants";
 import { PACKS, PARTNERSHIP_TYPES } from "@/lib/sponsoring";
 
 const REASONS = [
@@ -67,16 +68,25 @@ const Sponsoring = () => {
               d'un écosystème où se dessinent les collaborations de demain. {EVENT_DATES_LABEL} ·{" "}
               {EVENT_VENUE}.
             </p>
-            <a
-              href={waLink(
-                "Bonjour, je souhaite devenir sponsor de l'African Conscious Chill 3. Pouvez-vous m'envoyer plus d'informations ?"
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white font-semibold py-3.5 px-7 rounded-xl transition-all duration-300 hover:scale-[1.03]"
-            >
-              <WhatsAppIcon className="w-5 h-5" /> Parler à l'équipe partenariats
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={waLink(
+                  "Bonjour, je souhaite devenir sponsor de l'African Conscious Chill 3. Pouvez-vous m'envoyer plus d'informations ?"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white font-semibold py-3.5 px-7 rounded-xl transition-all duration-300 hover:scale-[1.03]"
+              >
+                <WhatsAppIcon className="w-5 h-5" /> Parler à l'équipe partenariats
+              </a>
+              <a
+                href={DOSSIER_PDF_URL}
+                download="Dossier-presentation-ACC3.pdf"
+                className="cta-ghost"
+              >
+                <Download size={18} /> Télécharger le dossier (PDF)
+              </a>
+            </div>
           </div>
         </div>
       </section>

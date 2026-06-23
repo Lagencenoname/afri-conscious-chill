@@ -67,10 +67,10 @@ const AboutSection = () => {
           </div>
 
           {/* Vidéo du thème */}
-          <div className="fade-in-up">
+          <div className="fade-in-up flex justify-center">
             <div className="relative overflow-hidden rounded-3xl lg:border lg:border-border lg:shadow-[var(--shadow-floating)] bg-background">
               <video
-                className="w-full h-auto object-contain mx-auto"
+                className="w-full h-auto object-contain mx-auto lg:max-h-[460px] lg:w-auto"
                 autoPlay
                 muted
                 loop
