@@ -28,6 +28,11 @@ export const WHATSAPP_UNDERGROUND_URL = waLink(
   "Bonjour, je suis un artiste indépendant / underground et je souhaite performer à l'ACC 3."
 );
 
+// Endpoint Google Apps Script (Web App) qui enregistre les inscriptions salubrité
+// dans une Google Sheet. Coller ici l'URL de déploiement (…/exec).
+// Voir docs/google-sheets-salubrite.md pour la mise en place.
+export const SALUBRITE_ENDPOINT = "REMPLACER_URL_APPS_SCRIPT";
+
 // --- Groupes WhatsApp (écran de confirmation campagne salubrité) ---
 // NOTE : remplacer ces liens d'invitation par les vrais liens des groupes.
 export const WHATSAPP_GROUP_PUBLIC =

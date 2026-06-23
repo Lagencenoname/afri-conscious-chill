@@ -6,6 +6,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import Footer from "@/components/Footer";
 import {
   SALUBRITE_DATE_LABEL,
+  SALUBRITE_ENDPOINT,
   WHATSAPP_GROUP_PUBLIC,
   WHATSAPP_GROUP_MEDIA,
   WHATSAPP_BOOKING_URL,
@@ -19,19 +20,41 @@ interface FormData {
 
 const Salubrite = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [form, setForm] = useState<FormData>({ fullName: "", city: "", heardAbout: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.fullName.trim() || !form.city.trim()) return;
-    // Persistance locale simple (le backend pourra être branché ultérieurement)
+
+    const entry = { ...form, at: new Date().toISOString() };
+
+    // Sauvegarde locale (filet de sécurité hors-ligne)
     try {
       const all = JSON.parse(localStorage.getItem("acc-salubrite") || "[]");
-      all.push({ ...form, at: new Date().toISOString() });
+      all.push(entry);
       localStorage.setItem("acc-salubrite", JSON.stringify(all));
     } catch {
       /* no-op */
     }
+
+    // Envoi vers la Google Sheet (Apps Script), si l'endpoint est configuré
+    if (SALUBRITE_ENDPOINT && !SALUBRITE_ENDPOINT.includes("REMPLACER")) {
+      setSending(true);
+      try {
+        await fetch(SALUBRITE_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(entry),
+        });
+      } catch {
+        /* l'inscription reste sauvegardée en local */
+      } finally {
+        setSending(false);
+      }
+    }
+
     setSubmitted(true);
   };
 
@@ -105,8 +128,9 @@ const Salubrite = () => {
                 />
               </div>
 
-              <button type="submit" className="cta-primary w-full">
-                Valider mon inscription <ArrowRight size={18} />
+              <button type="submit" disabled={sending} className="cta-primary w-full disabled:opacity-70">
+                {sending ? "Envoi en cours…" : "Valider mon inscription"}
+                {!sending && <ArrowRight size={18} />}
               </button>
             </form>
           ) : (
