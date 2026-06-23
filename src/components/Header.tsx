@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import accLogo from "@/assets/logo-africanconsciouschill.png";
+import accLogo from "@/assets/logo-africanconsciouschill.webp";
 import { BOOKING_URL } from "@/lib/constants";
 import ThemeToggle from "./ThemeToggle";
 

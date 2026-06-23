@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 
 // Logos partenaires · chargés automatiquement depuis /assets/partners (.jpg)
-const modules = import.meta.glob("@/assets/partners/*.jpg", {
+const modules = import.meta.glob("@/assets/partners/*.webp", {
   eager: true,
   import: "default",
 }) as Record<string, string>;

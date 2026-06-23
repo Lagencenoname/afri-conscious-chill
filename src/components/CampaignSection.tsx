@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Calendar, HeartHandshake, ArrowRight } from "lucide-react";
 import { SALUBRITE_DATE_LABEL } from "@/lib/constants";
-import campagneVisuel from "@/assets/campagne-salubrite.jpg";
+import campagneVisuel from "@/assets/campagne-salubrite.webp";
 
 const CampaignSection = () => {
   return (

@@ -1,5 +1,5 @@
 // Galerie des éditions précédentes · chargement automatique du dossier /assets/medis
-const modules = import.meta.glob("@/assets/medis/*.{jpg,jpeg,png}", {
+const modules = import.meta.glob("@/assets/medis/*.webp", {
   eager: true,
   import: "default",
 }) as Record<string, string>;

@@ -3,7 +3,7 @@ import CountdownTimer from "./CountdownTimer";
 import FloatingDots from "./FloatingDots";
 import Typewriter from "./Typewriter";
 import { BOOKING_URL, EVENT_DATES_LABEL, EVENT_VENUE } from "@/lib/constants";
-import heroBanner from "@/assets/banner-hero.jpg";
+import heroBanner from "@/assets/banner-hero.webp";
 
 const HeroSection = () => {
   const scrollToProgram = () =>

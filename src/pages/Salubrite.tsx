@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Users, Camera, CheckCircle2 } from "lucide-react";
-import accLogo from "@/assets/logo-africanconsciouschill.png";
+import accLogo from "@/assets/logo-africanconsciouschill.webp";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import Footer from "@/components/Footer";
 import {

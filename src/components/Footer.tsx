@@ -1,6 +1,6 @@
 import { Facebook, Phone, MapPin, Mail, ArrowUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import accLogo from "@/assets/logo-africanconsciouschill.png";
+import accLogo from "@/assets/logo-africanconsciouschill.webp";
 import { FACEBOOK_URL, BOOKING_URL, WHATSAPP_BOOKING_URL } from "@/lib/constants";
 import ThemeToggle from "./ThemeToggle";
 

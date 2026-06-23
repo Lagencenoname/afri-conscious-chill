@@ -1,7 +1,7 @@
 import { Mic2, ArrowRight } from "lucide-react";
 import { WHATSAPP_UNDERGROUND_URL } from "@/lib/constants";
 import FloatingDots from "./FloatingDots";
-import undergroundVisuel from "@/assets/appel-aux-artistes-underground.jpg";
+import undergroundVisuel from "@/assets/appel-aux-artistes-underground.webp";
 
 const UndergroundSection = () => {
   return (

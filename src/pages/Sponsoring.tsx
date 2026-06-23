@@ -13,7 +13,7 @@ import {
   Sparkles,
   Download,
 } from "lucide-react";
-import accLogo from "@/assets/logo-africanconsciouschill.png";
+import accLogo from "@/assets/logo-africanconsciouschill.webp";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import FloatingDots from "@/components/FloatingDots";
 import Footer from "@/components/Footer";

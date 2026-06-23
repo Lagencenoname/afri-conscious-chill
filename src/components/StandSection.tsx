@@ -1,6 +1,6 @@
 import { Utensils, CupSoda, Laptop, BookOpen, Palette } from "lucide-react";
 import { WHATSAPP_STAND_URL } from "@/lib/constants";
-import standVisuel from "@/assets/stands-acc.jpg";
+import standVisuel from "@/assets/stands-acc.webp";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 const CATEGORIES = [
