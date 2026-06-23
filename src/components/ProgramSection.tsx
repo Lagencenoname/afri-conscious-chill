@@ -1,81 +1,74 @@
-import { MessageCircle, Mic, Wrench, Camera, Award, Music } from "lucide-react";
-import panelSpeakers from "@/assets/panel-speakers.jpg";
+import { Trophy, Music, Users, Mic, Sparkles, PartyPopper } from "lucide-react";
+
+const DAYS = [
+  {
+    tag: "Jour 1 · 29 Août",
+    title: "Chill & Connexion",
+    accent: "from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))]",
+    items: [
+      { icon: Trophy, text: "Match de gala (artistes, influenceurs, managers, designers, marques)" },
+      { icon: Sparkles, text: "Installation du site & ambiance lounge" },
+      { icon: Music, text: "Animations musicales" },
+      { icon: Users, text: "Networking & stands partenaires" },
+    ],
+  },
+  {
+    tag: "Jour 2 · 30 Août",
+    title: "Contenus & Expériences",
+    accent: "from-[hsl(var(--teal-deep))] to-[hsl(var(--teal-night))]",
+    items: [
+      { icon: Mic, text: "Cérémonie d'ouverture, Keynote & Panels" },
+      { icon: Users, text: "Découverte des stands partenaires" },
+      { icon: Sparkles, text: "Open mic, performances, jeux" },
+      { icon: PartyPopper, text: "Concert de clôture" },
+    ],
+  },
+];
 
 const ProgramSection = () => {
-  const activities = [
-    {
-      icon: MessageCircle,
-      title: "PANELS DE DISCUSSION",
-      description: "Échanges enrichissants sur les enjeux actuels du digital et de la créativité en Afrique"
-    },
-    {
-      icon: Mic,
-      title: "TALK & KEYNOTE INSPIRANT",
-      description: "Conférences motivantes par des experts et leaders d'opinion reconnus"
-    },
-    {
-      icon: Wrench,
-      title: "ATELIER PRATIQUE",
-      description: "Sessions hands-on pour développer vos compétences et apprendre de nouvelles techniques"
-    },
-    {
-      icon: Camera,
-      title: "EXPOSITION PHOTOS",
-      description: "Découverte d'œuvres visuelles exceptionnelles d'artistes africains émergents"
-    },
-    {
-      icon: Award,
-      title: "DISTINCTION",
-      description: "Reconnaissance des talents et contributions remarquables à l'écosystème créatif"
-    },
-    {
-      icon: Music,
-      title: "ANIMATION DJ & AMBIANCE CLUBBING",
-      description: "Moments de détente et de networking dans une atmosphère festive et conviviale"
-    }
-  ];
-
   return (
-    <section id="programme" className="py-20 bg-gradient-to-br from-orange-50 to-yellow-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in-up">
-              Programme & Activités
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Une journée riche en échanges, apprentissages et networking pour tous les passionnés de créativité et d'entrepreneuriat
-            </p>
-          </div>
-
-          {/* Panel Speakers Visual */}
-          <div className="mb-12 text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <img 
-              src={panelSpeakers} 
-              alt="Panel Speakers - Entreprises et Marques" 
-              className="max-w-full h-auto mx-auto rounded-2xl shadow-lg"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {activities.map((activity, index) => {
-              const Icon = activity.icon;
-              return (
-                <div 
-                  key={activity.title}
-                  className="activity-card group hover:shadow-xl animate-fade-in-up"
-                  style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-                >
-                  <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-primary to-orange-600 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-4">{activity.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{activity.description}</p>
-                </div>
-              );
-            })}
-          </div>
+    <section id="programme" className="py-14 sm:py-20 bg-[hsl(var(--surface))]">
+      <div className="container">
+        <div className="max-w-3xl mx-auto text-center mb-12 fade-in-up">
+          <span className="eyebrow">Formats & Programmes</span>
+          <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground mb-4">
+            02 Jours, 02 Atmosphères
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Du networking décontracté aux moments les plus forts sur scène, chaque instant est conçu
+            pour transformer une rencontre en collaboration.
+          </p>
         </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {DAYS.map((day) => (
+            <div key={day.title} className="lift-card overflow-hidden fade-in-up">
+              <div className={`bg-gradient-to-r ${day.accent} px-8 py-6`}>
+                <span className="text-white/80 text-sm font-semibold uppercase tracking-wider">
+                  {day.tag}
+                </span>
+                <h3 className="font-display text-2xl font-bold text-white mt-1">{day.title}</h3>
+              </div>
+              <div className="p-8 space-y-5">
+                {day.items.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.text} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-[hsl(var(--surface))] border border-border">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <p className="text-foreground/90 leading-relaxed pt-1.5">{item.text}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
+          Lieu : Le Concerto, Akpakpa · Cotonou · Un after party est prévu 🎉
+        </p>
       </div>
     </section>
   );

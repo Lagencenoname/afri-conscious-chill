@@ -1,69 +1,71 @@
-import { Calendar, Clock, MapPin, Play } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import CountdownTimer from "./CountdownTimer";
+import FloatingDots from "./FloatingDots";
+import Typewriter from "./Typewriter";
+import { BOOKING_URL, EVENT_DATES_LABEL, EVENT_VENUE } from "@/lib/constants";
+import heroBanner from "@/assets/banner-hero.jpg";
 
 const HeroSection = () => {
-  const scrollToPricing = () => {
-    const element = document.getElementById('billets');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToProgram = () => {
-    const element = document.getElementById('programme');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToProgram = () =>
+    document.getElementById("programme")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section id="accueil" className="hero-gradient min-h-screen flex items-center pt-20">
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Logo/Title */}
-        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 mt-8 drop-shadow-lg animate-fade-in-up">
-          African Conscious
-          <span className="block text-yellow-300">Chill 2025</span>
-        </h1>
+    <section id="accueil" className="relative bg-night min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+      {/* Image de fond */}
+      <div className="absolute inset-0 z-0">
+        <img src={heroBanner} alt="" className="w-full h-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--teal-night))] via-[hsl(var(--teal-night))/0.85] to-[hsl(var(--teal-night))/0.7]" />
+      </div>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Rendez-vous annuel de réflexion, d'échange et de valorisation des secteurs créatifs, culturels et entrepreneurial en Afrique
+      <FloatingDots count={22} />
+
+      <div className="container relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-white/90 mb-8 animate-fade-in-up">
+            <span className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] animate-pulse" />
+            3ᵉ Édition · Une organisation de HILS Company
+          </div>
+
+          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-black text-white leading-[1.05] mb-6 drop-shadow-xl animate-fade-in-up">
+            African Conscious
+            <span className="block text-gradient-warm">CHILL 3</span>
+          </h1>
+
+          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[hsl(var(--gold))] mb-3 animate-fade-in-up">
+            Thème de l'édition
+          </p>
+          <p className="text-base sm:text-xl font-medium text-white max-w-2xl mx-auto mb-8 leading-relaxed min-h-[3.5rem] sm:min-h-[4rem]">
+            <Typewriter
+              text="Artistes, Influenceurs, Créatifs et Marques : Ensemble pour Créer, Collaborer et Impacter."
+              speed={42}
+              startDelay={600}
+            />
           </p>
 
-          {/* Event Info */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-              <Calendar className="text-yellow-300" size={20} />
-              <span className="text-white font-semibold">31 AOÛT 2025</span>
+          <div className="flex flex-wrap justify-center gap-3 mb-10 animate-fade-in-up">
+            <div className="flex items-center gap-2 glass px-4 py-2">
+              <Calendar className="text-[hsl(var(--gold))]" size={18} />
+              <span className="text-white font-semibold text-sm">{EVENT_DATES_LABEL}</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-              <Clock className="text-yellow-300" size={20} />
-              <span className="text-white font-semibold">15H</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-              <MapPin className="text-yellow-300" size={20} />
-              <span className="text-white font-semibold">PAVILLON DU LAC</span>
+            <div className="flex items-center gap-2 glass px-4 py-2">
+              <MapPin className="text-[hsl(var(--gold))]" size={18} />
+              <span className="text-white font-semibold text-sm">{EVENT_VENUE}</span>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Button 
-              className="cta-hero pulse-glow"
-              onClick={() => window.open('https://wa.me/message/TLW5YHAJ74CTH1', '_blank')}
-            >
-              RÉSERVER MON BILLET
-            </Button>
-            <Button 
-              className="cta-secondary bg-white/20 border-white text-white hover:bg-white hover:text-primary"
-              onClick={scrollToProgram}
-            >
-              <Play size={20} className="mr-2" />
-              VOIR LE PROGRAMME
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14 animate-fade-in-up">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="cta-hero pulse-glow">
+              Réserver mon billet <ArrowRight size={20} />
+            </a>
+            <button onClick={scrollToProgram} className="cta-ghost">
+              Voir le programme
+            </button>
           </div>
 
-          {/* Countdown */}
-          <div className="animate-fade-in-up mb-8" style={{ animationDelay: '0.8s' }}>
-            <h3 className="text-2xl font-bold text-white mb-4">Plus que :</h3>
+          <div className="animate-fade-in-up">
+            <p className="text-sm uppercase tracking-[0.2em] text-white/60 mb-4">
+              Ouverture des portes dans
+            </p>
             <CountdownTimer />
           </div>
         </div>

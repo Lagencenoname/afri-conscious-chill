@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+# African Conscious Chill 3 — Landing Page (Édition 2026)
 
-## Project info
+Landing page de l'événement **African Conscious Chill 3** : « Artistes, influenceurs, créatifs
+et marques ensemble pour créer, collaborer et impacter. » — **29 & 30 août 2026, Cotonou**.
+Une organisation HILS Company.
 
-**URL**: https://lovable.dev/projects/e6ee8d66-ee36-4afd-9404-3f027bbf5561
+## Stack
+Vite · React · TypeScript · Tailwind CSS · shadcn/ui · React Router.
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/e6ee8d66-ee36-4afd-9404-3f027bbf5561) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+## Démarrage
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev      # serveur de dev
+npm run build    # build de production
 ```
 
-**Edit a file directly in GitHub**
+## Design system
+Inspiré du design system **meetandjuice** (light, cartes glass, motion expressive) adapté à la
+marque ACC : **couleur primaire orange** + accent teal nuit + or. Tokens dans
+[src/index.css](src/index.css) (HSL), polices **Outfit** (corps) / **Roboto** (titres).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Structure des pages
 
-**Use GitHub Codespaces**
+| Fichier | État | Rôle |
+|---|---|---|
+| [src/pages/Index.tsx](src/pages/Index.tsx) | ✅ | Monte la landing page (`/`) |
+| [src/pages/Salubrite.tsx](src/pages/Salubrite.tsx) | ✅ | Page `/salubrite` : formulaire d'inscription + écran de confirmation (3 boutons WhatsApp) |
+| [src/pages/Sponsoring.tsx](src/pages/Sponsoring.tsx) | ✅ | Page `/sponsoring` détaillée : pourquoi, 6 packs complets, 3 types de partenariat, CTA WhatsApp pré-remplis par contexte |
+| [src/components/LandingPage.tsx](src/components/LandingPage.tsx) | ✅ | Orchestration des sections + reveal au scroll |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Sections (dans l'ordre d'affichage)
+Header · Hero · About (texte officiel 2026 + stats) · Program (Jour 1 / Jour 2) · Campaign
+(salubrité) · Stand · Underground · Gallery (medis) · Pricing (passes) · Sponsoring (packs) ·
+Partners (« Ils nous font confiance ») · Social · FinalCTA · Footer · WhatsAppButton.
 
-## What technologies are used for this project?
+### Constantes — [src/lib/constants.ts](src/lib/constants.ts)
+URL billetterie unique, liens/numéros WhatsApp, dates de l'événement.
 
-This project is built with:
+## Décisions clés
+- **Billetterie** : tous les CTA pointent vers `BOOKING_URL` avec `target="_blank"`.
+- **Compte à rebours** : cible `2026-08-29` (`EVENT_DATE_TARGET`).
+- **Bouton WhatsApp flottant** : vraie icône officielle ([WhatsAppIcon.tsx](src/components/WhatsAppIcon.tsx)).
+- **Nettoyage** : suppression de la vidéo embed, des posts Facebook, des points de retrait et de
+  la mention « CMA » du footer.
+- **Images** : assets de `medis/`, `partners/` et visuels lourds compressés via `sharp`
+  (~61 Mo → ~6 Mo). Galerie et logos chargés via `import.meta.glob`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e6ee8d66-ee36-4afd-9404-3f027bbf5561) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## À faire / À compléter
+- **Liens des groupes WhatsApp** (écran de confirmation salubrité) : remplacer
+  `WHATSAPP_GROUP_PUBLIC` et `WHATSAPP_GROUP_MEDIA` dans `constants.ts` par les vrais liens
+  d'invitation.
+- **Formulaire salubrité** : actuellement stocké en `localStorage` — brancher un backend si besoin.
+- **Lieu** : confirmé · **Le Concerto, Akpakpa** (`EVENT_VENUE`).
+- **Tarifs des passes** : non communiqués dans le dossier ; ajouter les prix si disponibles.

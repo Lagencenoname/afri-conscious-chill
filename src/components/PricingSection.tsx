@@ -1,120 +1,114 @@
-import { Check, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Check, Minus, Star } from "lucide-react";
+import { BOOKING_URL } from "@/lib/constants";
+
+const PASSES = [
+  {
+    name: "Pass Chill",
+    tagline: "L'essentiel de l'expérience",
+    features: [
+      { label: "Accès 2 jours", ok: true },
+      { label: "Concert de clôture (Standard)", ok: true },
+      { label: "Masterclass", ok: false },
+      { label: "Lounge VIP", ok: false },
+      { label: "Kit Goodies", ok: false },
+    ],
+    highlighted: false,
+  },
+  {
+    name: "Pass Conscious",
+    tagline: "Le plus populaire",
+    features: [
+      { label: "Accès 2 jours", ok: true },
+      { label: "Concert de clôture (Fan Zone)", ok: true },
+      { label: "Masterclass", ok: true },
+      { label: "Lounge VIP", ok: false },
+      { label: "Kit Goodies", ok: true },
+    ],
+    highlighted: true,
+    badge: "Recommandé",
+  },
+  {
+    name: "Pass Impact VIP",
+    tagline: "L'expérience complète",
+    features: [
+      { label: "Accès 2 jours", ok: true },
+      { label: "Concert de clôture (Carré Or)", ok: true },
+      { label: "Masterclass", ok: true },
+      { label: "Lounge VIP", ok: true },
+      { label: "Kit Goodies", ok: true },
+    ],
+    highlighted: false,
+  },
+];
 
 const PricingSection = () => {
-  const pricingPlans = [
-    {
-      name: "STANDARD",
-      price: "10.000F",
-      features: [
-        "Accès à l'événement",
-        "Placement standard",
-        "Accès au goûter"
-      ],
-      cta: "CHOISIR STANDARD",
-      highlighted: false
-    },
-    {
-      name: "PREMIUM",
-      price: "15.000F",
-      features: [
-        "Tous les avantages du Pass Simple",
-        "Placement amélioré",
-        "Accès prioritaire aux activités interactives",
-        "Masterclass exclusive sur le montage vidéo",
-        "30% de réduction sur le prix des livres exposés"
-      ],
-      cta: "CHOISIR PREMIUM",
-      highlighted: true,
-      badge: "Recommandé"
-    },
-    {
-      name: "VIP",
-      price: "20.000F",
-      features: [
-        "Tous les avantages du Pass Premium",
-        "-50% sur consultation visuelle & -10% sur l'achat de verres chez Siloé House Optique",
-        "-5% sur la location de véhicules chez TheDriver Africa",
-        "Accès à la formation \"Go Pro\" de Marion Souza",
-        "Accès à l'espace réservé aux intervenants et experts",
-        "Un tote bag Fleek personnalisé \"African Conscious Chill\""
-      ],
-      cta: "CHOISIR VIP",
-      highlighted: false
-    }
-  ];
-
   return (
-    <section id="billets" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in-up">
-              Choisissez votre Pass
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Trois formules adaptées à vos besoins pour vivre pleinement l'expérience African Conscious Chill
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div 
-                key={plan.name}
-                className={`${plan.highlighted ? 'pricing-card-featured' : 'pricing-card'} animate-fade-in-up`}
-                style={{ animationDelay: `${0.4 + index * 0.2}s` }}
-              >
-                
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-5xl font-black bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent">
-                      {plan.price}
-                    </span>
-                  </div>
-                  {plan.badge && (
-                    <div className="mb-4">
-                      <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold inline-flex items-center gap-1 shadow-lg">
-                        <Star size={14} />
-                        {plan.badge}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <div className="flex-shrink-0">
-                        <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                      </div>
-                      <span className="text-muted-foreground text-sm leading-relaxed">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button 
-                  className={`w-full ${plan.highlighted ? 'cta-primary' : 'cta-secondary'} font-bold text-lg py-6`}
-                  onClick={() => window.open('https://wa.me/message/TLW5YHAJ74CTH1', '_blank')}
-                >
-                  {plan.cta}
-                </Button>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-            <p className="text-muted-foreground mb-4">
-              Des questions sur les formules ? Contactez-nous directement !
-            </p>
-            <Button 
-              className="cta-primary"
-              onClick={() => window.open('https://wa.me/message/TLW5YHAJ74CTH1', '_blank')}
-            >
-              Contacter via WhatsApp
-            </Button>
-          </div>
+    <section id="billets" className="py-14 sm:py-20 bg-[hsl(var(--surface))]">
+      <div className="container">
+        <div className="max-w-3xl mx-auto text-center mb-12 fade-in-up">
+          <span className="eyebrow">Billetterie</span>
+          <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground mb-4">
+            Choisissez votre Pass
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Trois formules pour vivre pleinement les deux jours de l'African Conscious Chill 3.
+          </p>
         </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+          {PASSES.map((pass) => (
+            <div
+              key={pass.name}
+              className={`fade-in-up flex flex-col p-8 rounded-2xl transition-all duration-300 ${
+                pass.highlighted
+                  ? "bg-night text-white shadow-[var(--shadow-floating)] md:-translate-y-3 border border-white/10"
+                  : "surface-card hover:-translate-y-1.5"
+              }`}
+            >
+              {pass.badge && (
+                <div className="inline-flex items-center gap-1 self-start rounded-full bg-gradient-to-r from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))] text-white px-3 py-1 text-xs font-bold mb-4">
+                  <Star size={12} /> {pass.badge}
+                </div>
+              )}
+              <h3 className="font-display text-2xl font-bold mb-1">{pass.name}</h3>
+              <p className={`text-sm mb-6 ${pass.highlighted ? "text-white/70" : "text-muted-foreground"}`}>
+                {pass.tagline}
+              </p>
+
+              <ul className="space-y-3 mb-8 flex-1">
+                {pass.features.map((f) => (
+                  <li key={f.label} className="flex items-center gap-3 text-sm">
+                    {f.ok ? (
+                      <Check className="w-5 h-5 text-[hsl(var(--orange-secondary))] flex-shrink-0" />
+                    ) : (
+                      <Minus className={`w-5 h-5 flex-shrink-0 ${pass.highlighted ? "text-white/30" : "text-muted-foreground/40"}`} />
+                    )}
+                    <span className={f.ok ? "" : pass.highlighted ? "text-white/40" : "text-muted-foreground/60"}>
+                      {f.label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  pass.highlighted
+                    ? "cta-primary w-full"
+                    : "cta-outline w-full"
+                }
+              >
+                Réserver
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
+          Un after party est prévu 🎉 · Réservation 100% en ligne, paiement sécurisé.
+        </p>
       </div>
     </section>
   );

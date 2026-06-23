@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Documents de référence / design (hors application)
+meetandjuice-design/
+DOSSIER_DE_SPONSORING_ACC_NEW_2026*.pdf

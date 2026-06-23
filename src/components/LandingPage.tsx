@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
-import VideoSection from "./VideoSection";
 import AboutSection from "./AboutSection";
 import ProgramSection from "./ProgramSection";
+import CampaignSection from "./CampaignSection";
+import StandSection from "./StandSection";
+import UndergroundSection from "./UndergroundSection";
+import GallerySection from "./GallerySection";
 import PricingSection from "./PricingSection";
-import PickupPointsSection from "./PickupPointsSection";
+import SponsoringSection from "./SponsoringSection";
 import PartnersSection from "./PartnersSection";
-import FacebookPostSection from "./FacebookPostSection";
 import SocialSection from "./SocialSection";
 import FinalCTASection from "./FinalCTASection";
 import Footer from "./Footer";
@@ -15,22 +17,19 @@ import WhatsAppButton from "./WhatsAppButton";
 
 const LandingPage = () => {
   useEffect(() => {
-    // Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all fade-in-up elements
-    const elements = document.querySelectorAll('.fade-in-up');
+    const elements = document.querySelectorAll(".fade-in-up");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -40,13 +39,15 @@ const LandingPage = () => {
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <VideoSection />
       <AboutSection />
       <ProgramSection />
+      <CampaignSection />
+      <StandSection />
+      <UndergroundSection />
+      <GallerySection />
       <PricingSection />
-      <PickupPointsSection />
+      <SponsoringSection />
       <PartnersSection />
-      <FacebookPostSection />
       <SocialSection />
       <FinalCTASection />
       <Footer />

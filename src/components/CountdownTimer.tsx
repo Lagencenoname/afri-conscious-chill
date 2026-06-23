@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { EVENT_DATE_TARGET } from "@/lib/constants";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,7 +10,7 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2025-08-31T15:00:00').getTime();
+    const targetDate = new Date(EVENT_DATE_TARGET).getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -28,24 +29,25 @@ const CountdownTimer = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const units = [
+    { value: timeLeft.days, label: "Jours" },
+    { value: timeLeft.hours, label: "Heures" },
+    { value: timeLeft.minutes, label: "Min" },
+    { value: timeLeft.seconds, label: "Sec" },
+  ];
+
   return (
-    <div className="flex justify-center gap-2 sm:gap-4 mt-8 w-full">
-      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
-        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.days}</div>
-        <div className="text-xs sm:text-sm uppercase text-white/80">Jours</div>
-      </div>
-      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
-        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.hours}</div>
-        <div className="text-xs sm:text-sm uppercase text-white/80">Heures</div>
-      </div>
-      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
-        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.minutes}</div>
-        <div className="text-xs sm:text-sm uppercase text-white/80">Min</div>
-      </div>
-      <div className="countdown-box flex-1 max-w-[70px] sm:max-w-none">
-        <div className="text-lg sm:text-2xl md:text-3xl font-bold text-white">{timeLeft.seconds}</div>
-        <div className="text-xs sm:text-sm uppercase text-white/80">Sec</div>
-      </div>
+    <div className="flex justify-center gap-2 sm:gap-4 w-full max-w-md mx-auto">
+      {units.map((u) => (
+        <div key={u.label} className="cd-unit">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tabular-nums">
+            {String(u.value).padStart(2, "0")}
+          </div>
+          <div className="text-[10px] sm:text-xs uppercase tracking-wider text-white/70 mt-1">
+            {u.label}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
