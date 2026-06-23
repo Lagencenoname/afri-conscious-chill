@@ -1,21 +1,24 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import accLogo from "@/assets/logo-africanconsciouschill.webp";
 import { BOOKING_URL } from "@/lib/constants";
 import ThemeToggle from "./ThemeToggle";
 
+// `to` = page dédiée (route) · `id` = section de la landing
 const NAV_LINKS = [
   { id: "accueil", label: "Accueil" },
   { id: "programme", label: "Programme" },
-  { id: "salubrite", label: "Salubrité" },
+  { to: "/salubrite", label: "Salubrité" },
   { id: "stands", label: "Stands" },
-  { id: "sponsoring", label: "Sponsoring" },
+  { to: "/sponsoring", label: "Sponsoring" },
   { id: "partenaires", label: "Partenaires" },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -24,9 +27,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  const handleNav = (link: { id?: string; to?: string }) => {
     setIsMenuOpen(false);
+    if (link.to) {
+      navigate(link.to);
+    } else if (link.id) {
+      const el = document.getElementById(link.id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      else navigate(`/#${link.id}`);
+    }
   };
 
   return (
@@ -39,15 +48,15 @@ const Header = () => {
     >
       <div className="container mx-auto py-3">
         <div className="flex items-center justify-between">
-          <button onClick={() => scrollToSection("accueil")} className="flex items-center">
+          <button onClick={() => handleNav({ to: "/" })} className="flex items-center">
             <img src={accLogo} alt="African Conscious Chill" className="h-12 w-auto" />
           </button>
 
           <nav className="hidden lg:flex items-center gap-7">
             {NAV_LINKS.map((link) => (
               <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                key={link.label}
+                onClick={() => handleNav(link)}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
                   scrolled ? "text-foreground" : "text-white/90"
                 }`}
@@ -78,8 +87,8 @@ const Header = () => {
             <nav className="flex flex-col gap-1 px-4">
               {NAV_LINKS.map((link) => (
                 <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
+                  key={link.label}
+                  onClick={() => handleNav(link)}
                   className="text-left text-foreground hover:text-primary transition-colors font-medium py-2.5"
                 >
                   {link.label}

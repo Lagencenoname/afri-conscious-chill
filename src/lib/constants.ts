@@ -31,7 +31,7 @@ export const WHATSAPP_UNDERGROUND_URL = waLink(
 // Endpoint Google Apps Script (Web App) qui enregistre les inscriptions salubrité
 // dans une Google Sheet. Coller ici l'URL de déploiement (…/exec).
 // Voir docs/google-sheets-salubrite.md pour la mise en place.
-export const SALUBRITE_ENDPOINT = "https://script.google.com/macros/s/AKfycbwtgNzXzsfPa26yW2_sVlRA3ZksdYwkgWL9If6CyqHUjAGQ_mbYZR1OGmmbucfMp0qu/exec";
+export const SALUBRITE_ENDPOINT = "https://script.google.com/macros/s/AKfycby_Vcg6iadvJo8_Et49omHuFoOJCtDkOdOiNjZzmtbTFBRPK3MBvyPyj3xaV9pVF1no/exec";
 
 // --- Groupes WhatsApp (écran de confirmation campagne salubrité) ---
 // NOTE : remplacer ces liens d'invitation par les vrais liens des groupes.

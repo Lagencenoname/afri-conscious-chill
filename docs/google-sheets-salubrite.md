@@ -23,7 +23,7 @@ function doPost(e) {
 
     // En-têtes si la feuille est vide
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["Date", "Nom et prénom", "Ville", "Connaît l'ACC ? Comment"]);
+      sheet.appendRow(["Date", "Nom et prénom", "Ville", "Contact WhatsApp", "Connaît l'ACC ? Comment"]);
     }
 
     const data = JSON.parse(e.postData.contents);
@@ -31,6 +31,7 @@ function doPost(e) {
       data.at ? new Date(data.at) : new Date(),
       data.fullName || "",
       data.city || "",
+      data.phone || "",
       data.heardAbout || "",
     ]);
 

@@ -15,17 +15,18 @@ import {
 interface FormData {
   fullName: string;
   city: string;
+  phone: string;
   heardAbout: string;
 }
 
 const Salubrite = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [form, setForm] = useState<FormData>({ fullName: "", city: "", heardAbout: "" });
+  const [form, setForm] = useState<FormData>({ fullName: "", city: "", phone: "", heardAbout: "" });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.fullName.trim() || !form.city.trim()) return;
+    if (!form.fullName.trim() || !form.city.trim() || !form.phone.trim()) return;
 
     const entry = { ...form, at: new Date().toISOString() };
 
@@ -111,6 +112,22 @@ const Salubrite = () => {
                   onChange={(e) => setForm({ ...form, city: e.target.value })}
                   className="w-full rounded-xl border border-border px-4 py-3 text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition"
                   placeholder="Ex. Cotonou"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">
+                  Contact WhatsApp <span className="text-[hsl(var(--red-accent))]">*</span>
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  inputMode="tel"
+                  required
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                  className="w-full rounded-xl border border-border px-4 py-3 text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition"
+                  placeholder="Ex. +229 01 00 00 00 00"
                 />
               </div>
 

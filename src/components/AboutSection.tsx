@@ -1,6 +1,5 @@
 import { Palette, Users, Briefcase } from "lucide-react";
 import CountUp from "./CountUp";
-import heroBanner from "@/assets/banner-hero.webp";
 import themeVideo from "@/assets/hero-background-mobile.mp4";
 
 const PILLARS = [
@@ -75,8 +74,7 @@ const AboutSection = () => {
                 muted
                 loop
                 playsInline
-                preload="metadata"
-                poster={heroBanner}
+                preload="auto"
               >
                 <source src={themeVideo} type="video/mp4" />
               </video>
