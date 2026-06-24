@@ -15,7 +15,6 @@ import SocialSection from "./SocialSection";
 import LeadSection from "./LeadSection";
 import FinalCTASection from "./FinalCTASection";
 import Footer from "./Footer";
-import WhatsAppButton from "./WhatsAppButton";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -55,7 +54,6 @@ const LandingPage = () => {
       <FinalCTASection />
       <LeadSection />
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
