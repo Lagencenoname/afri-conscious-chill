@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Preloader from "./Preloader";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
@@ -38,6 +39,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen">
+      <Preloader />
       <Header />
       <HeroSection />
       <AboutSection />
