@@ -51,7 +51,7 @@ const PricingSection = () => {
             Choisissez votre Pass
           </h2>
           <p className="text-lg text-muted-foreground">
-            Trois formules pour vivre pleinement les deux jours de l'African Conscious Chill 3.
+            Trois formules pour les deux jours de l'African Conscious Chill 3.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ const PricingSection = () => {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
-          Un after party est prévu 🎉 · Réservation 100% en ligne, paiement sécurisé.
+          Un after party est prévu. Réservation en ligne, paiement sécurisé.
         </p>
       </div>
     </section>

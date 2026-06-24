@@ -35,8 +35,7 @@ const ProgramSection = () => {
             02 Jours, 02 Atmosphères
           </h2>
           <p className="text-lg text-muted-foreground">
-            Du networking décontracté aux moments les plus forts sur scène, chaque instant est conçu
-            pour transformer une rencontre en collaboration.
+            Deux jours pensés pour que les rencontres se transforment en projets.
           </p>
         </div>
 
@@ -67,7 +66,7 @@ const ProgramSection = () => {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
-          Lieu : Le Concerto, Akpakpa · Cotonou · Un after party est prévu 🎉
+          Lieu : Le Concerto, Akpakpa (Cotonou). Un after party est prévu.
         </p>
       </div>
     </section>

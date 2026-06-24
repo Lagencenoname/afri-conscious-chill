@@ -17,15 +17,14 @@ const CampaignSection = () => {
               <Calendar size={16} /> {SALUBRITE_DATE_LABEL}
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Avant la grande célébration, l'African Conscious Chill s'engage pour la communauté.
-              Rejoignez l'équipe et les créatifs pour une action de salubrité au cœur de la ville :
-              un geste concret pour un Bénin plus propre, dans l'esprit « Créer avec conscience ».
+              Avant l'événement, on retrousse les manches. Rejoignez l'équipe et les créatifs pour
+              une matinée de salubrité dans la ville : un geste simple pour un Bénin plus propre.
             </p>
             <ul className="space-y-3 mb-8">
               {[
-                "Une matinée d'engagement collectif et de bonne humeur",
-                "Rencontre avec la communauté ACC avant l'événement",
-                "Visibilité pour les marques et partenaires engagés",
+                "Une matinée sur le terrain avec l'équipe et les créatifs",
+                "L'occasion de rencontrer la communauté ACC avant l'événement",
+                "De la visibilité pour les marques et partenaires présents",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-foreground/90">
                   <HeartHandshake className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />

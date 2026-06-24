@@ -11,6 +11,7 @@ import PricingSection from "./PricingSection";
 import SponsoringSection from "./SponsoringSection";
 import PartnersSection from "./PartnersSection";
 import SocialSection from "./SocialSection";
+import LeadSection from "./LeadSection";
 import FinalCTASection from "./FinalCTASection";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
@@ -50,6 +51,7 @@ const LandingPage = () => {
       <PartnersSection />
       <SocialSection />
       <FinalCTASection />
+      <LeadSection />
       <Footer />
       <WhatsAppButton />
     </div>

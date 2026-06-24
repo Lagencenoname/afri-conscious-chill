@@ -43,7 +43,7 @@ const PartnersSection = () => {
             Ils Nous Font Confiance
           </h2>
           <p className="text-lg text-muted-foreground">
-            Marques, Institutions et Créatifs qui construisent avec nous un Ecosystème créatif fort.
+            Les marques et institutions qui nous accompagnent sur cette édition.
           </p>
         </div>
 

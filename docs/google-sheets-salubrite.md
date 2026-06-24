@@ -31,9 +31,16 @@ function doPost(e) {
       data.at ? new Date(data.at) : new Date(),
       data.fullName || "",
       data.city || "",
-      data.phone || "",
+      "", // le numéro est écrit juste après, en format texte
       data.heardAbout || "",
     ]);
+
+    // Colonne D (Contact WhatsApp) en TEXTE pour garder le "+" et les zéros initiaux
+    // (sinon Google Sheets interprète "+229..." comme une formule -> #ERROR!).
+    const row = sheet.getLastRow();
+    const phoneCell = sheet.getRange(row, 4);
+    phoneCell.setNumberFormat("@");
+    phoneCell.setValue(String(data.phone || ""));
 
     return ContentService
       .createTextOutput(JSON.stringify({ ok: true }))

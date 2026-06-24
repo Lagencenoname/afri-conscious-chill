@@ -15,9 +15,9 @@ const UndergroundSection = () => {
               Appel aux Artistes <span className="text-gradient-warm">Underground</span>
             </h2>
             <p className="text-lg text-white/80 leading-relaxed mb-8">
-              La scène African Conscious Chill 3 offre une tribune aux artistes indépendants et à la
-              scène underground. Rappeurs, chanteurs, slameurs, performeurs : c'est votre moment pour
-              vous révéler devant le grand public, les marques et les influenceurs réunis.
+              La scène est ouverte aux artistes indépendants. Rappeurs, chanteurs, slameurs,
+              performeurs : venez vous produire devant le public, les marques et les créateurs
+              présents.
             </p>
             <a
               href={WHATSAPP_UNDERGROUND_URL}

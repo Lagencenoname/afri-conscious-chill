@@ -13,8 +13,8 @@ const SponsoringSection = () => {
             Prenez le Lead sur l'Impact
           </h2>
           <p className="text-lg text-muted-foreground">
-            Transformez votre budget marketing en un impact social mesurable et mémorable. Du digital
-            jusqu'à la grande scène du concert de clôture.
+            Associez votre marque à un événement qui rassemble créatifs, influenceurs et entreprises,
+            du digital à la scène du concert de clôture.
           </p>
         </div>
 

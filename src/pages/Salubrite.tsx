@@ -74,7 +74,7 @@ const Salubrite = () => {
             <img src={accLogo} alt="African Conscious Chill" className="h-14 w-auto mx-auto mb-5" />
             <span className="eyebrow !text-[hsl(var(--gold))] justify-center">Action citoyenne · {SALUBRITE_DATE_LABEL}</span>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-white">
-              {submitted ? "Inscription confirmée 🎉" : "Campagne de Salubrité"}
+              {submitted ? "Inscription confirmée" : "Campagne de Salubrité"}
             </h1>
           </div>
 

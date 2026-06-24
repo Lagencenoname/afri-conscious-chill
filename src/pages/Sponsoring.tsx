@@ -64,9 +64,8 @@ const Sponsoring = () => {
               Devenez sponsor de l'<span className="text-gradient-warm">ACC 3</span>
             </h1>
             <p className="text-lg text-white/80 mb-8">
-              S'engager comme sponsor de l'ACC Édition 3, c'est occuper une place stratégique au cœur
-              d'un écosystème où se dessinent les collaborations de demain. {EVENT_DATES_LABEL} ·{" "}
-              {EVENT_VENUE}.
+              Devenir sponsor de l'ACC 3, c'est associer votre marque à l'écosystème créatif béninois
+              et aux collaborations qui s'y créent. {EVENT_DATES_LABEL}, {EVENT_VENUE}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

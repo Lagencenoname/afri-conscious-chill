@@ -6,20 +6,17 @@ const PILLARS = [
   {
     icon: Palette,
     title: "Créer",
-    description:
-      "Stimuler l'imagination et la production de contenus de haute qualité, et initier des projets inédits sur place.",
+    description: "Lancer de vrais projets sur place, pas seulement en parler.",
   },
   {
     icon: Users,
     title: "Collaborer",
-    description:
-      "Effacer les barrières hiérarchiques pour un dialogue horizontal entre les talents et les grands groupes.",
+    description: "Mettre talents et grandes marques autour de la même table, sans hiérarchie.",
   },
   {
     icon: Briefcase,
     title: "Impacter",
-    description:
-      "Garantir que chaque interaction génère une valeur économique, sociale ou culturelle concrète.",
+    description: "Faire en sorte que chaque rencontre débouche sur quelque chose de concret.",
   },
 ];
 
