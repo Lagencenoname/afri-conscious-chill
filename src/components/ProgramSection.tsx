@@ -2,7 +2,7 @@ import { Trophy, Music, Users, Mic, Sparkles, PartyPopper } from "lucide-react";
 
 const DAYS = [
   {
-    tag: "Jour 1 · 29 Août",
+    tag: "Partie 1",
     title: "Chill & Connexion",
     accent: "from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))]",
     items: [
@@ -13,7 +13,7 @@ const DAYS = [
     ],
   },
   {
-    tag: "Jour 2 · 30 Août",
+    tag: "Partie 2",
     title: "Contenus & Expériences",
     accent: "from-[hsl(var(--teal-deep))] to-[hsl(var(--teal-night))]",
     items: [
@@ -32,10 +32,10 @@ const ProgramSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-12 fade-in-up">
           <span className="eyebrow">Formats & Programmes</span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground mb-4">
-            02 Jours, 02 Atmosphères
+            02 Parties, 02 Atmosphères
           </h2>
           <p className="text-lg text-muted-foreground">
-            Deux jours pensés pour que les rencontres se transforment en projets.
+            Deux parties pensées pour que les rencontres se transforment en projets.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ const ProgramSection = () => {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
-          Lieu : Le Concerto, Akpakpa (Cotonou). Un after party est prévu.
+          Lieu : Centre EYA, Akpakpa (Cotonou). Un after party est prévu.
         </p>
       </div>
     </section>
