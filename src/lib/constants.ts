@@ -15,7 +15,7 @@ export const waLink = (message: string) =>
 
 /** Lien WhatsApp direct (sans message) vers le contact Booking / Partenariat. */
 export const WHATSAPP_BOOKING_URL = waLink(
-  "Bonjour, je vous contacte au sujet de l'African Conscious Chill 3 (29 & 30 août 2026)."
+  "Bonjour, je vous contacte au sujet de l'African Conscious Chill 3."
 );
 
 /** Lien WhatsApp pré-rempli pour la réservation d'un stand. */
@@ -41,10 +41,10 @@ export const WHATSAPP_GROUP_MEDIA =
   "https://chat.whatsapp.com/Br5XHyS5HyvDLfWGs72P4D?s=cl&p=a&mlu=4";
 
 /** Dates & lieu de l'édition 2026. */
-export const EVENT_DATE_TARGET = "2026-08-29T09:00:00"; // début compte à rebours
-export const EVENT_DATES_LABEL = "29 & 30 Août 2026";
+export const EVENT_DATE_TARGET = "2026-11-18T09:00:00"; // début compte à rebours
+export const EVENT_DATES_LABEL = "18 Novembre 2026";
 export const EVENT_CITY = "Cotonou, Bénin";
-export const EVENT_VENUE = "Le Concerto, Akpakpa";
+export const EVENT_VENUE = "Centre Communautaire EYA, Akpakpa";
 export const SALUBRITE_DATE_LABEL = "29 Juillet 2026";
 
 /** Réseaux sociaux. */
