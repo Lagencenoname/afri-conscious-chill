@@ -6,7 +6,6 @@ import { ThemeProvider } from "next-themes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import Salubrite from "./pages/Salubrite";
 import Sponsoring from "./pages/Sponsoring";
 import NotFound from "./pages/NotFound";
 
@@ -22,7 +21,6 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/salubrite" element={<Salubrite />} />
           <Route path="/sponsoring" element={<Sponsoring />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

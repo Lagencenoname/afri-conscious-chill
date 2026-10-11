@@ -28,24 +28,11 @@ export const WHATSAPP_UNDERGROUND_URL = waLink(
   "Bonjour, je suis un artiste indépendant / underground et je souhaite performer à l'ACC 3."
 );
 
-// Endpoint Google Apps Script (Web App) qui enregistre les inscriptions salubrité
-// dans une Google Sheet. Coller ici l'URL de déploiement (…/exec).
-// Voir docs/google-sheets-salubrite.md pour la mise en place.
-export const SALUBRITE_ENDPOINT = "https://script.google.com/macros/s/AKfycby_Vcg6iadvJo8_Et49omHuFoOJCtDkOdOiNjZzmtbTFBRPK3MBvyPyj3xaV9pVF1no/exec";
-
-// --- Groupes WhatsApp (écran de confirmation campagne salubrité) ---
-// NOTE : remplacer ces liens d'invitation par les vrais liens des groupes.
-export const WHATSAPP_GROUP_PUBLIC =
-  "https://chat.whatsapp.com/Cbzxl1vSu137gfT3gCVukL?s=cl&p=a&mlu=4";
-export const WHATSAPP_GROUP_MEDIA =
-  "https://chat.whatsapp.com/Br5XHyS5HyvDLfWGs72P4D?s=cl&p=a&mlu=4";
-
 /** Dates & lieu de l'édition 2026. */
-export const EVENT_DATE_TARGET = "2026-11-18T09:00:00"; // début compte à rebours
-export const EVENT_DATES_LABEL = "18 Novembre 2026";
+export const EVENT_DATE_TARGET = "2026-11-15T09:00:00"; // début compte à rebours
+export const EVENT_DATES_LABEL = "15 Novembre 2026";
 export const EVENT_CITY = "Cotonou, Bénin";
 export const EVENT_VENUE = "Centre Communautaire EYA, Akpakpa";
-export const SALUBRITE_DATE_LABEL = "29 Juillet 2026";
 
 /** Réseaux sociaux. */
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61555937974681";
