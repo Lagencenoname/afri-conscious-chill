@@ -9,7 +9,6 @@ import ThemeToggle from "./ThemeToggle";
 const NAV_LINKS = [
   { id: "accueil", label: "Accueil" },
   { id: "programme", label: "Programme" },
-  { to: "/salubrite", label: "Salubrité" },
   { id: "stands", label: "Stands" },
   { to: "/sponsoring", label: "Sponsoring" },
   { id: "partenaires", label: "Partenaires" },
