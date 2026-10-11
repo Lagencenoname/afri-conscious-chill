@@ -39,6 +39,17 @@ const ProgramSection = () => {
           </p>
         </div>
 
+        <div className="max-w-3xl mx-auto mb-12 fade-in-up">
+          <div className="rounded-3xl overflow-hidden border border-border shadow-[var(--shadow-floating)]">
+            <img
+              src="/acc3-programme.jpg"
+              alt="African Conscious Chill 3 · 15 Novembre 2026 · EYA Centre Communautaire"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {DAYS.map((day) => (
             <div key={day.title} className="lift-card overflow-hidden fade-in-up">
