@@ -1,4 +1,5 @@
 import { Trophy, Music, Users, Mic, Sparkles, PartyPopper } from "lucide-react";
+import visuelOfficiel from "@/assets/visuel-officiel-acc3.webp";
 
 const DAYS = [
   {
@@ -42,7 +43,7 @@ const ProgramSection = () => {
         <div className="max-w-3xl mx-auto mb-12 fade-in-up">
           <div className="rounded-3xl overflow-hidden border border-border shadow-[var(--shadow-floating)]">
             <img
-              src="/acc3-programme.jpg"
+              src={visuelOfficiel}
               alt="African Conscious Chill 3 · 15 Novembre 2026 · EYA Centre Communautaire"
               className="w-full h-auto"
               loading="lazy"

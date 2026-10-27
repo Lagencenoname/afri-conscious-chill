@@ -51,11 +51,12 @@ const PricingSection = () => {
             Choisissez votre Pass
           </h2>
           <p className="text-lg text-muted-foreground">
-            Trois formules pour les deux jours de l'African Conscious Chill 3.
+            Deux formules pour vivre l'African Conscious Chill 3, le 15 novembre 2026 au Centre
+            Communautaire EYA.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
           {PASSES.map((pass) => (
             <div
               key={pass.name}
@@ -71,13 +72,16 @@ const PricingSection = () => {
                 </div>
               )}
               <h3 className="font-display text-2xl font-bold mb-1">{pass.name}</h3>
-              <p className={`text-sm mb-6 ${pass.highlighted ? "text-white/70" : "text-muted-foreground"}`}>
+              <p className={`text-sm mb-4 ${pass.highlighted ? "text-white/70" : "text-muted-foreground"}`}>
                 {pass.tagline}
               </p>
+              <div className={`font-display text-4xl font-black mb-6 ${pass.highlighted ? "text-[hsl(var(--gold))]" : "text-gradient-warm"}`}>
+                {pass.price}
+              </div>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {pass.features.map((f) => (
-                  <li key={f.label} className="flex items-center gap-3 text-sm">
+                  <li key={f.label} className="flex items-start gap-3 text-sm">
                     {f.ok ? (
                       <Check className="w-5 h-5 text-[hsl(var(--orange-secondary))] flex-shrink-0" />
                     ) : (
@@ -100,14 +104,14 @@ const PricingSection = () => {
                     : "cta-outline w-full"
                 }
               >
-                Réserver
+                Réserver mon {pass.name}
               </a>
             </div>
           ))}
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
-          Un after party est prévu. Réservation en ligne, paiement sécurisé.
+          Réservation en ligne, paiement sécurisé.
         </p>
       </div>
     </section>
