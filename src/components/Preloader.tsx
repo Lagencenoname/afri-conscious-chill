@@ -6,7 +6,7 @@ import FloatingDots from "./FloatingDots";
 // Toutes les images lourdes à précharger (galerie + visuels + partenaires)
 const medis = import.meta.glob("@/assets/medis/*.webp", { eager: true, import: "default" }) as Record<string, string>;
 const partners = import.meta.glob("@/assets/partners/*.webp", { eager: true, import: "default" }) as Record<string, string>;
-const visuals = import.meta.glob("@/assets/{visuel-officiel-acc3,villages-solutions-acc,appel-aux-artistes-underground,lead-acc}.webp", {
+const visuals = import.meta.glob("@/assets/{banner-hero,visuel-officiel-acc3,villages-solutions-acc,lead-acc}.webp", {
   eager: true,
   import: "default",
 }) as Record<string, string>;
