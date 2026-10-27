@@ -20,7 +20,7 @@ export const WHATSAPP_BOOKING_URL = waLink(
 
 /** Lien WhatsApp pré-rempli pour la réservation d'un stand. */
 export const WHATSAPP_STAND_URL = waLink(
-  "Bonjour, je souhaite réserver un stand pour l'événement ACC 2026."
+  "Bonjour, je souhaite réserver un stand au Village des solutions et opportunités de l'ACC 3."
 );
 
 /** Lien WhatsApp pré-rempli pour l'appel aux artistes underground. */

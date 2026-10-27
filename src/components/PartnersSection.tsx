@@ -22,21 +22,27 @@ const PartnersSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto fade-in-up">
-          {LOGOS.map((src, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center h-32 sm:h-40 px-4 rounded-2xl dark:bg-white"
-            >
-              <img
-                src={src}
-                alt="Partenaire African Conscious Chill"
-                loading="lazy"
-                className="max-h-full max-w-full object-contain mix-blend-multiply"
-              />
-            </div>
-          ))}
-        </div>
+        {LOGOS.length === 0 ? (
+          <p className="text-center text-muted-foreground fade-in-up">
+            Les partenaires de cette édition seront dévoilés très bientôt.
+          </p>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto fade-in-up">
+            {LOGOS.map((src, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center h-32 sm:h-40 px-4 rounded-2xl dark:bg-white"
+              >
+                <img
+                  src={src}
+                  alt="Partenaire African Conscious Chill"
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain mix-blend-multiply"
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

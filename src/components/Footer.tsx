@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const QUICK_LINKS = [
   { id: "programme", label: "Programme" },
-  { id: "stands", label: "Stands" },
+  { id: "stands", label: "Village" },
   { id: "sponsoring", label: "Sponsoring" },
   { id: "partenaires", label: "Partenaires" },
 ];

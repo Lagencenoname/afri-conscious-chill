@@ -1,43 +1,43 @@
 import { Check, Minus, Star } from "lucide-react";
 import { BOOKING_URL } from "@/lib/constants";
 
-const PASSES = [
+type Pass = {
+  name: string;
+  price: string;
+  tagline: string;
+  features: { label: string; ok: boolean }[];
+  highlighted: boolean;
+  badge?: string;
+};
+
+const PASSES: Pass[] = [
   {
-    name: "Pass Chill",
-    tagline: "L'essentiel de l'expérience",
+    name: "Pass Premium",
+    price: "15.000 F",
+    tagline: "L'expérience Premium",
     features: [
-      { label: "Accès 2 jours", ok: true },
-      { label: "Concert de clôture (Standard)", ok: true },
-      { label: "Masterclass", ok: false },
-      { label: "Lounge VIP", ok: false },
-      { label: "Kit Goodies", ok: false },
+      { label: "Accès à l'amphithéâtre et à l'ensemble de l'événement", ok: true },
+      { label: "Participation aux panels et activités", ok: true },
+      { label: "Accès au networking", ok: true },
+      { label: "Participation aux expériences proposées durant l'événement", ok: true },
+      { label: "Expérience Premium", ok: true },
     ],
     highlighted: false,
   },
   {
-    name: "Pass Conscious",
-    tagline: "Le plus populaire",
+    name: "Pass VIP",
+    price: "30.000 F",
+    tagline: "L'expérience complète",
     features: [
-      { label: "Accès 2 jours", ok: true },
-      { label: "Concert de clôture (Fan Zone)", ok: true },
-      { label: "Masterclass", ok: true },
-      { label: "Lounge VIP", ok: false },
-      { label: "Kit Goodies", ok: true },
+      { label: "Tous les privilèges du Pass Premium", ok: true },
+      { label: "Accès à un espace VIP dédié", ok: true },
+      { label: "Networking privilégié avec invités, partenaires et intervenants", ok: true },
+      { label: "Bracelet / kit VIP exclusif", ok: true },
+      { label: "Accès à l'expérience After Party & Camping hors Cotonou", ok: true },
+      { label: "Catalogue exclusif des créateurs de contenu", ok: true },
     ],
     highlighted: true,
     badge: "Recommandé",
-  },
-  {
-    name: "Pass Impact VIP",
-    tagline: "L'expérience complète",
-    features: [
-      { label: "Accès 2 jours", ok: true },
-      { label: "Concert de clôture (Carré Or)", ok: true },
-      { label: "Masterclass", ok: true },
-      { label: "Lounge VIP", ok: true },
-      { label: "Kit Goodies", ok: true },
-    ],
-    highlighted: false,
   },
 ];
 
@@ -51,11 +51,12 @@ const PricingSection = () => {
             Choisissez votre Pass
           </h2>
           <p className="text-lg text-muted-foreground">
-            Trois formules pour les deux jours de l'African Conscious Chill 3.
+            Deux formules pour vivre l'African Conscious Chill 3, le 15 novembre 2026 au Centre
+            Communautaire EYA.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
           {PASSES.map((pass) => (
             <div
               key={pass.name}
@@ -71,13 +72,16 @@ const PricingSection = () => {
                 </div>
               )}
               <h3 className="font-display text-2xl font-bold mb-1">{pass.name}</h3>
-              <p className={`text-sm mb-6 ${pass.highlighted ? "text-white/70" : "text-muted-foreground"}`}>
+              <p className={`text-sm mb-4 ${pass.highlighted ? "text-white/70" : "text-muted-foreground"}`}>
                 {pass.tagline}
               </p>
+              <div className={`font-display text-4xl font-black mb-6 ${pass.highlighted ? "text-[hsl(var(--gold))]" : "text-gradient-warm"}`}>
+                {pass.price}
+              </div>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {pass.features.map((f) => (
-                  <li key={f.label} className="flex items-center gap-3 text-sm">
+                  <li key={f.label} className="flex items-start gap-3 text-sm">
                     {f.ok ? (
                       <Check className="w-5 h-5 text-[hsl(var(--orange-secondary))] flex-shrink-0" />
                     ) : (
@@ -100,14 +104,14 @@ const PricingSection = () => {
                     : "cta-outline w-full"
                 }
               >
-                Réserver
+                Réserver mon {pass.name}
               </a>
             </div>
           ))}
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-10 fade-in-up">
-          Un after party est prévu. Réservation en ligne, paiement sécurisé.
+          Réservation en ligne, paiement sécurisé.
         </p>
       </div>
     </section>

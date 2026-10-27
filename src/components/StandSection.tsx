@@ -1,14 +1,29 @@
-import { Utensils, CupSoda, Laptop, BookOpen, Palette } from "lucide-react";
+import {
+  Laptop,
+  Rocket,
+  GraduationCap,
+  School,
+  Wallet,
+  Briefcase,
+  Building2,
+  Lightbulb,
+  Handshake,
+  Info,
+} from "lucide-react";
 import { WHATSAPP_STAND_URL } from "@/lib/constants";
-import standVisuel from "@/assets/stands-acc.webp";
+import villageVisuel from "@/assets/villages-solutions-acc.webp";
 import WhatsAppIcon from "./WhatsAppIcon";
 
-const CATEGORIES = [
-  { icon: Utensils, label: "Nourritures" },
-  { icon: CupSoda, label: "Boissons" },
+const STRUCTURES = [
   { icon: Laptop, label: "Solutions numériques" },
-  { icon: BookOpen, label: "Livres & œuvres d'auteurs" },
-  { icon: Palette, label: "Créations artisanales" },
+  { icon: Rocket, label: "Startups" },
+  { icon: GraduationCap, label: "Centres de formation" },
+  { icon: School, label: "Écoles & instituts" },
+  { icon: Wallet, label: "Fintech" },
+  { icon: Briefcase, label: "Services professionnels" },
+  { icon: Building2, label: "Organisations" },
+  { icon: Lightbulb, label: "Entreprises innovantes" },
+  { icon: Handshake, label: "Solutions pour entrepreneurs" },
 ];
 
 const StandSection = () => {
@@ -19,12 +34,12 @@ const StandSection = () => {
           <div className="fade-in-up">
             <div className="relative rounded-3xl overflow-hidden border border-border shadow-[var(--shadow-floating)] bg-[hsl(var(--surface))]">
               <img
-                src={standVisuel}
-                alt="Demande de stand · African Conscious Chill"
-                className="w-full h-auto object-contain max-h-[560px] mx-auto"
+                src={villageVisuel}
+                alt="Village des solutions et opportunités · African Conscious Chill 3"
+                className="w-full h-auto object-contain max-h-[620px] mx-auto"
               />
               <div className="absolute top-4 left-4 rounded-full bg-[hsl(var(--red-accent))] text-white px-4 py-1.5 text-sm font-bold shadow-lg">
-                Seulement 5 stands
+                Places limitées
               </div>
             </div>
           </div>
@@ -32,17 +47,19 @@ const StandSection = () => {
           <div className="fade-in-up">
             <span className="eyebrow">Exposition</span>
             <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground mb-5">
-              Demande de Stand
+              Village des Solutions & Opportunités
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              5 stands, 5 opportunités de visibilité, de prospection et de vente. Cette édition ouvre
-              ses espaces d'exposition aux marques, entrepreneurs et créateurs qui souhaitent
-              présenter leurs produits et services à une communauté dynamique de créateurs de
-              contenu, d'influenceurs, d'artistes et de passionnés du numérique.
+              Exposez au cœur de cette édition de l'ACC vos solutions, vos services et vos
+              opportunités, et venez à la rencontre de jeunes, entrepreneurs, créateurs,
+              professionnels et porteurs de projets.
             </p>
 
+            <h3 className="font-display text-lg font-bold text-foreground mb-3">
+              Structures recherchées
+            </h3>
             <div className="flex flex-wrap gap-2 mb-8">
-              {CATEGORIES.map((c) => {
+              {STRUCTURES.map((c) => {
                 const Icon = c.icon;
                 return (
                   <span
@@ -55,9 +72,8 @@ const StandSection = () => {
               })}
             </div>
 
-            <p className="text-sm text-muted-foreground mb-6">
-              Faites découvrir votre activité, générez des contacts et gagnez en visibilité.
-              Réservez votre stand dès maintenant.
+            <p className="flex items-center gap-2 text-sm font-semibold text-[hsl(var(--red-accent))] mb-6">
+              <Info size={18} /> Places limitées : réservez votre stand dès maintenant.
             </p>
 
             <a
@@ -66,7 +82,7 @@ const StandSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-white font-semibold py-3.5 px-7 rounded-xl shadow-[var(--shadow-raised)] transition-all duration-300 hover:scale-[1.03]"
             >
-              <WhatsAppIcon className="w-5 h-5" /> Réserver mon Stand 
+              <WhatsAppIcon className="w-5 h-5" /> Réserver mon Stand
             </a>
           </div>
         </div>
