@@ -1,43 +1,43 @@
 import { Check, Minus, Star } from "lucide-react";
 import { BOOKING_URL } from "@/lib/constants";
 
-const PASSES = [
+type Pass = {
+  name: string;
+  price: string;
+  tagline: string;
+  features: { label: string; ok: boolean }[];
+  highlighted: boolean;
+  badge?: string;
+};
+
+const PASSES: Pass[] = [
   {
-    name: "Pass Chill",
-    tagline: "L'essentiel de l'expérience",
+    name: "Pass Premium",
+    price: "15.000 F",
+    tagline: "L'expérience Premium",
     features: [
-      { label: "Accès 2 jours", ok: true },
-      { label: "Concert de clôture (Standard)", ok: true },
-      { label: "Masterclass", ok: false },
-      { label: "Lounge VIP", ok: false },
-      { label: "Kit Goodies", ok: false },
+      { label: "Accès à l'amphithéâtre et à l'ensemble de l'événement", ok: true },
+      { label: "Participation aux panels et activités", ok: true },
+      { label: "Accès au networking", ok: true },
+      { label: "Participation aux expériences proposées durant l'événement", ok: true },
+      { label: "Expérience Premium", ok: true },
     ],
     highlighted: false,
   },
   {
-    name: "Pass Conscious",
-    tagline: "Le plus populaire",
+    name: "Pass VIP",
+    price: "30.000 F",
+    tagline: "L'expérience complète",
     features: [
-      { label: "Accès 2 jours", ok: true },
-      { label: "Concert de clôture (Fan Zone)", ok: true },
-      { label: "Masterclass", ok: true },
-      { label: "Lounge VIP", ok: false },
-      { label: "Kit Goodies", ok: true },
+      { label: "Tous les privilèges du Pass Premium", ok: true },
+      { label: "Accès à un espace VIP dédié", ok: true },
+      { label: "Networking privilégié avec invités, partenaires et intervenants", ok: true },
+      { label: "Bracelet / kit VIP exclusif", ok: true },
+      { label: "Accès à l'expérience After Party & Camping hors Cotonou", ok: true },
+      { label: "Catalogue exclusif des créateurs de contenu", ok: true },
     ],
     highlighted: true,
     badge: "Recommandé",
-  },
-  {
-    name: "Pass Impact VIP",
-    tagline: "L'expérience complète",
-    features: [
-      { label: "Accès 2 jours", ok: true },
-      { label: "Concert de clôture (Carré Or)", ok: true },
-      { label: "Masterclass", ok: true },
-      { label: "Lounge VIP", ok: true },
-      { label: "Kit Goodies", ok: true },
-    ],
-    highlighted: false,
   },
 ];
 
