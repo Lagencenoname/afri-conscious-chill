@@ -5,7 +5,6 @@ import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import ProgramSection from "./ProgramSection";
 import StandSection from "./StandSection";
-import UndergroundSection from "./UndergroundSection";
 import GallerySection from "./GallerySection";
 import PricingSection from "./PricingSection";
 import SponsoringSection from "./SponsoringSection";
@@ -43,7 +42,6 @@ const LandingPage = () => {
       <AboutSection />
       <ProgramSection />
       <StandSection />
-      <UndergroundSection />
       <GallerySection />
       <PricingSection />
       <SponsoringSection />

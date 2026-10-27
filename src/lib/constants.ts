@@ -23,11 +23,6 @@ export const WHATSAPP_STAND_URL = waLink(
   "Bonjour, je souhaite réserver un stand au Village des solutions et opportunités de l'ACC 3."
 );
 
-/** Lien WhatsApp pré-rempli pour l'appel aux artistes underground. */
-export const WHATSAPP_UNDERGROUND_URL = waLink(
-  "Bonjour, je suis un artiste indépendant / underground et je souhaite performer à l'ACC 3."
-);
-
 /** Dates & lieu de l'édition 2026. */
 export const EVENT_DATE_TARGET = "2026-11-15T09:00:00"; // début compte à rebours
 export const EVENT_DATES_LABEL = "15 Novembre 2026";
