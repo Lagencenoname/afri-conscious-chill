@@ -50,6 +50,8 @@
     --gold: 42 92% 56%;
     --red-accent: 4 80% 56%;
     --surface: 30 50% 98%;
+    /* Orange lisible pour petits textes sur fond clair (contraste ≥ 4.5:1) */
+    --primary-ink: 18 100% 40%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--orange-primary)), hsl(var(--orange-secondary)));
@@ -107,6 +109,7 @@
     --ring: 18 100% 56%;
 
     --surface: 192 26% 10%;
+    --primary-ink: 22 100% 62%;
   }
 }
 
@@ -132,19 +135,24 @@
 @layer components {
   /* ---- Buttons ---- */
   .cta-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))] text-white font-semibold py-3.5 px-7 rounded-xl shadow-[var(--shadow-warm)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[var(--shadow-glow)];
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap bg-gradient-to-r from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))] text-white font-semibold py-3.5 px-5 sm:px-7 rounded-xl shadow-[var(--shadow-warm)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[var(--shadow-glow)];
   }
 
   .cta-hero {
-    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))] text-white font-bold py-5 px-10 rounded-2xl shadow-[var(--shadow-warm)] transition-all duration-300 hover:scale-[1.03] text-lg;
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap bg-gradient-to-r from-[hsl(var(--orange-primary))] to-[hsl(var(--orange-secondary))] text-white font-bold py-5 px-10 rounded-2xl shadow-[var(--shadow-warm)] transition-all duration-300 hover:scale-[1.03] text-lg;
   }
 
   .cta-ghost {
-    @apply inline-flex items-center justify-center gap-2 bg-transparent border border-white/40 text-white font-semibold py-3.5 px-7 rounded-xl transition-all duration-300 hover:bg-white hover:text-[hsl(var(--teal-night))];
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap bg-transparent border border-white/40 text-white font-semibold py-3.5 px-5 sm:px-7 rounded-xl transition-all duration-300 hover:bg-white hover:text-[hsl(var(--teal-night))];
   }
 
   .cta-outline {
-    @apply inline-flex items-center justify-center gap-2 bg-transparent border border-[hsl(var(--border))] text-[hsl(var(--foreground))] font-semibold py-3.5 px-7 rounded-xl transition-all duration-300 hover:border-[hsl(var(--primary))] hover:text-[hsl(var(--primary))];
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap bg-transparent border border-[hsl(var(--border))] text-[hsl(var(--foreground))] font-semibold py-3.5 px-5 sm:px-7 rounded-xl transition-all duration-300 hover:border-[hsl(var(--primary))] hover:text-[hsl(var(--primary))];
+  }
+
+  /* Bouton plein (ACC Business) : orange uni, texte nuit, toujours sur une ligne */
+  .cta-solid {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap h-12 px-5 sm:px-6 rounded-xl bg-[hsl(var(--orange-primary))] text-[hsl(var(--teal-night))] text-[15px] sm:text-base font-bold transition-[background-color,transform] duration-200 hover:bg-[hsl(var(--orange-secondary))] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--teal-night))] focus-visible:ring-offset-2;
   }
 
   /* ---- Cards ---- */
@@ -214,6 +222,7 @@
     animation: marquee 60s linear infinite;
   }
   .marquee-track:hover { animation-play-state: paused; }
+  .marquee-reverse { animation-direction: reverse; }
 
   /* Particules flottantes (points orange animés) */
   .float-dot {

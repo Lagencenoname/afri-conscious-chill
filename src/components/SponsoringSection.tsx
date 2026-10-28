@@ -56,7 +56,7 @@ const SponsoringSection = () => {
 
         <div className="text-center mt-12 fade-in-up">
           <Link to="/sponsoring" className="cta-primary">
-            Voir tous les détails du sponsoring <ArrowRight size={18} />
+            Détails du sponsoring <ArrowRight size={18} />
           </Link>
         </div>
       </div>

@@ -9,6 +9,7 @@ import GallerySection from "./GallerySection";
 import PricingSection from "./PricingSection";
 import SponsoringSection from "./SponsoringSection";
 import PartnersSection from "./PartnersSection";
+import BusinessTeaserSection from "./BusinessTeaserSection";
 import SocialSection from "./SocialSection";
 import LeadSection from "./LeadSection";
 import FinalCTASection from "./FinalCTASection";
@@ -46,6 +47,7 @@ const LandingPage = () => {
       <PricingSection />
       <SponsoringSection />
       <PartnersSection />
+      <BusinessTeaserSection />
       <SocialSection />
       <FinalCTASection />
       <LeadSection />

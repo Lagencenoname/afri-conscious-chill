@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { id: "stands", label: "Village" },
   { to: "/sponsoring", label: "Sponsoring" },
   { id: "partenaires", label: "Partenaires" },
+  { to: "/business", label: "ACC Business" },
 ];
 
 const Header = () => {
