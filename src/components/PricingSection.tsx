@@ -33,7 +33,7 @@ const PASSES: Pass[] = [
       { label: "Accès à un espace VIP dédié", ok: true },
       { label: "Networking privilégié avec invités, partenaires et intervenants", ok: true },
       { label: "Bracelet / kit VIP exclusif", ok: true },
-      { label: "Accès à l'expérience After Party & Camping hors Cotonou", ok: true },
+      { label: "Accès à l'expérience After Party & Camping", ok: true },
       { label: "Catalogue exclusif des créateurs de contenu", ok: true },
     ],
     highlighted: true,

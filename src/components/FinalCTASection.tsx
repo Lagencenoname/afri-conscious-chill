@@ -26,7 +26,7 @@ const FinalCTASection = () => {
             </div>
             <div className="flex items-center gap-2 glass px-4 py-2">
               <Sparkles className="text-white" size={18} />
-              <span className="text-white font-semibold text-sm">Concert de clôture</span>
+              <span className="text-white font-semibold text-sm">After party</span>
             </div>
           </div>
 

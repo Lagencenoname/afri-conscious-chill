@@ -25,7 +25,7 @@ export const WHATSAPP_STAND_URL = waLink(
 
 /** Dates & lieu de l'édition 2026. */
 export const EVENT_DATE_TARGET = "2026-11-15T09:00:00"; // début compte à rebours
-export const EVENT_DATES_LABEL = "15 Novembre 2026";
+export const EVENT_DATES_LABEL = "Dimanche 15 Novembre 2026";
 export const EVENT_CITY = "Cotonou, Bénin";
 export const EVENT_VENUE = "Centre Communautaire EYA, Akpakpa";
 
@@ -34,3 +34,7 @@ export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61555937974
 
 /** Dossier de présentation / sponsoring (PDF servi depuis /public). */
 export const DOSSIER_PDF_URL = "/dossier-presentation-acc3.pdf";
+
+/** Programme officiel (PDF hébergé sur Google Drive). */
+export const PROGRAMME_PDF_URL =
+  "https://drive.google.com/drive/folders/1wgWVCyq0CbGOoNpOsaD35kdAsjaNx0zM";

@@ -33,6 +33,17 @@ Google Analytics 4 (`G-YFCGCB35FT`) chargé dans `index.html`.
   politique de modification ou de remboursement n'est affichée tant que l'équipe ACC ne les a
   pas définies.
 
+## Programme officiel (section `#programme`)
+- `ProgramSection.tsx` reprend le PDF « Programme officiel ACC 3 » : dimanche 15/11/2026,
+  EYA Centre Communautaire, 09h00 – 17h30, MC Espérance & Giovani, déroulé horaire complet,
+  esplanade 15h00 – 17h30, clôture 17h30.
+- Visuels des panels : `src/assets/panels/panel-1-acc3.webp` et `panel-2-acc3.webp`
+  (panélistes et modérateurs repris en texte à côté de chaque visuel).
+- Bouton « Télécharger le programme » → `PROGRAMME_PDF_URL` (dossier Google Drive) dans `src/lib/constants.ts`.
+- Décisions : l'after party reste mentionnée mais sans localisation (plus de « hors Cotonou ») ;
+  le « concert de clôture » absent du programme officiel a été retiré du site ; l'événement
+  dure une journée (les packs sponsoring disent « accès VIP pour la journée »).
+
 ## Prochaines étapes
 - Construire `/business/annuaire` et `/business/annuaire/:slug` à partir de `BusinessListingCard`.
 - Générer le QR code de la carte de visite collective (vers `/business/annuaire`).

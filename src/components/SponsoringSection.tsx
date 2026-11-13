@@ -14,7 +14,7 @@ const SponsoringSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground">
             Associez votre marque à un événement qui rassemble créatifs, influenceurs et entreprises,
-            du digital à la scène du concert de clôture.
+            des panels au Village des Opportunités.
           </p>
         </div>
 

@@ -15,7 +15,7 @@ export const PACKS: Pack[] = [
     tagline: "L'entrée idéale pour exister sur l'événement.",
     perks: [
       "Logo sur tous les supports (affiches, bâches, etc.)",
-      "1 accès VIP pour les deux jours, concert de clôture inclus",
+      "1 accès VIP pour la journée, after party inclus",
       "Parrainage d'un prix spécial (Jeux / performances)",
       "Goodies African Conscious Chill",
       "Remise d'une distinction sur scène",
@@ -28,7 +28,7 @@ export const PACKS: Pack[] = [
     tagline: "Plus de visibilité et d'interaction directe.",
     perks: [
       "Logo sur tous les supports de communication",
-      "3 accès VIP pour les deux jours",
+      "3 accès VIP pour la journée",
       "Stand d'exposition",
       "Parrainage exclusif d'une Masterclass ou d'un Mentoring",
       "Animation d'un jeu-concours sur scène",
@@ -42,7 +42,7 @@ export const PACKS: Pack[] = [
     tagline: "Prise de parole et contenu de marque dédié.",
     perks: [
       "Logo sur tous les supports de communication",
-      "4 accès VIP pour les deux jours",
+      "4 accès VIP pour la journée",
       "Campagne Brand Content dédiée (interview vidéo)",
       "5 minutes pour présenter votre structure",
       "Deux publications publicitaires sur nos réseaux",
@@ -57,7 +57,7 @@ export const PACKS: Pack[] = [
     featured: true,
     perks: [
       "Logo sur tous les supports de communication",
-      "5 accès VIP pour les deux jours",
+      "5 accès VIP pour la journée",
       "Mise en avant d'un kakémono sur le site",
       "8 minutes de prise de parole avec PPT",
       "Parrainage d'un prix spécial (audace créative)",
@@ -71,7 +71,7 @@ export const PACKS: Pack[] = [
     tagline: "Storytelling premium et exposition renforcée.",
     perks: [
       "Tous les avantages du pack Rubis",
-      "6 accès VIP pour les deux jours",
+      "6 accès VIP pour la journée",
       "12 minutes de prise de parole avec PPT",
       "Vidéo personnalisée diffusée pendant l'événement",
       "Brand Content Premium : mini-documentaire Success Story",
@@ -85,7 +85,7 @@ export const PACKS: Pack[] = [
     tagline: "Le statut de Parrain officiel de l'édition.",
     perks: [
       "Tous les avantages du pack Émeraude",
-      "8 accès VIP pour les deux jours",
+      "8 accès VIP pour la journée",
       "Reconnaissance officielle en tant que Parrain de l'événement",
       "Intervention sur le panel principal de votre choix",
       "Interview exclusif du dirigeant (média Success Story PodLab)",
